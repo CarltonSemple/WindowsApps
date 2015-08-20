@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-gl"
+"ResourceDimensions"		"language-gl"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\split.language-gl.pri"			"resources.pri"

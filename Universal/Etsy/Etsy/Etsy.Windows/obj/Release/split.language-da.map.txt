@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-da"
+"ResourceDimensions"		"language-da"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\split.language-da.pri"			"resources.pri"

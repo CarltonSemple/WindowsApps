@@ -1,0 +1,18 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-100"
+"ResourceDimensions"		"scale-100"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\filemap.scale-100.pri"			"resources.pri"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\WideLogo.scale-100.png"			"Assets\WideLogo.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\StoreLogo.scale-100.png"			"Assets\StoreLogo.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Square71x71Logo.scale-100.png"			"Assets\Square71x71Logo.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\SplashScreen.scale-100.png"			"Assets\SplashScreen.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\SmallLogo.scale-100.png"			"Assets\SmallLogo.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Logo.scale-100.png"			"Assets\Logo.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Store\dark50x50.scale-100.png"			"Assets\Store\dark50x50.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Splash\splash_mobile.scale-100.png"			"Assets\Splash\splash_mobile.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\71x71\71x71.scale-100.png"			"Assets\71x71\71x71.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\44x44\44x44.scale-100.png"			"Assets\44x44\44x44.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\310x150\dark310x150.scale-100.png"			"Assets\310x150\dark310x150.scale-100.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\150x150\dark150x150.scale-100.png"			"Assets\150x150\dark150x150.scale-100.png"

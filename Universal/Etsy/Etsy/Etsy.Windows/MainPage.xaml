@@ -1,0 +1,571 @@
+﻿<Page xmlns:UI="using:Microsoft.Advertising.WinRT.UI" 
+    x:Class="Etsy.MainPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Etsy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    
+    xmlns:myUserControl="using:Etsy"
+    
+    mc:Ignorable="d"
+    Unloaded="Page_Unloaded">
+
+    <Grid Background="White" Name="mainGrid"
+          >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="50*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Progress Indicator -->
+        <ProgressRing Name="pRing"
+                      Grid.ColumnSpan="6" Grid.RowSpan="3"
+                      HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Height="500" Width="500"
+                      Canvas.ZIndex="7" 
+                      Foreground="Red" Background="Transparent"
+                      Visibility="Collapsed"/>
+        <!-- Image Quality Option -->
+        <StackPanel Name="quality_panel" 
+                    Grid.ColumnSpan="6" Grid.RowSpan="3"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Canvas.ZIndex="8"
+                    Visibility="Collapsed">
+            <TextBlock Text="Is it taking too long to load?"
+                       FontSize="24"
+                       Foreground="Black"/>
+            <Button Name="imageQualityButton"
+                    Click="imageQualityButton_Click">
+                <Button.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </Button.Background>
+                <TextBlock Text="Try Lower Image Quality"
+                           FontSize="22"
+                           Foreground="Blue"/>
+            </Button>
+        </StackPanel>
+
+        <!-- Load Error Notification -->
+        <Rectangle Name="errorVisibilityBlocker"
+                   Grid.ColumnSpan="8" Grid.RowSpan="3"
+                   Canvas.ZIndex="9"
+                   Fill="Red" Opacity="0.2"
+                   Visibility="Collapsed"/>
+        <!-- Hide the rest of the page -->
+        <!-- panel for displaying the error -->
+        <StackPanel Name="LoadErrorPanel"
+                    Grid.ColumnSpan="8" Grid.RowSpan="3"
+                    Canvas.ZIndex="10"
+                    Visibility="Collapsed">
+            <Image Name="smileyface"
+                   Margin="0,100,0,20"
+                   Width="300" Height="300"
+                   Source="Assets/SadFace.png"/>
+            <TextBlock Name="loadErrorBlock"
+                       Foreground="Black"
+                       TextAlignment="Center"
+                       FontSize="22"/>
+            <Button Name="refreshButton"
+                    Click="refreshButton_Click"
+                    Height="auto" Width="auto"
+                    HorizontalAlignment="Center"
+                    Background="Blue"
+                    BorderBrush="White"
+                    Visibility="Collapsed">
+                <TextBlock Text="Retry"
+                           Foreground="White"
+                           FontSize="20"/>
+            </Button>
+            <Button Name="error_goBackButton"
+                    Click="error_goBackButton_Click"
+                    Height="auto" Width="auto"
+                    HorizontalAlignment="Center"
+                    Background="Red"
+                    BorderBrush="White"
+                    Visibility="Collapsed">
+                <TextBlock Text="Go Back"
+                           Foreground="White"
+                           FontSize="20"/>
+            </Button>
+        </StackPanel>
+
+        <Rectangle Name="topSectionFill"
+            Grid.Column="0" Grid.ColumnSpan="6"
+                   Fill="LightCyan"
+                   Canvas.ZIndex="0"/>
+        
+        <!-- Menu -->
+        <Button Name="menuButton"
+                Grid.Row="0" Grid.Column="0"
+                Canvas.ZIndex="3"
+                HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch"
+                VerticalAlignment="Stretch" BorderThickness="0"
+                Click="menuButton_Click" Background="Transparent">
+            <Grid HorizontalAlignment="Stretch"
+                  Margin="-20,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Name="buttonIndicator"
+                       Grid.Column="0"
+                       HorizontalAlignment="Left"
+                       Width="80"
+                       Margin="0,0,20,0"
+                       Source="Assets/ButtonIndicator.png"/>
+                <TextBlock Name="pageTitle"
+                       Text="Artsy" Foreground="SlateGray" FontSize="40"
+                       Width="auto"
+                       Margin="0,0,0,0"
+                       Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                
+                <!--<Border 
+                    Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"
+                    Background="Black"
+                    Height="1"/>-->
+            </Grid>
+        </Button>
+        <Rectangle 
+            Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+            Canvas.ZIndex="2" Fill="LightCyan" Opacity="0"/>
+        <Grid Name="menuPanel"
+              Height="700"
+              Background="Red"
+              Margin="0,-775,0,0"
+              Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2"
+              Canvas.ZIndex="2"
+              VerticalAlignment="Top">
+            <Grid.Transitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition/>
+                </TransitionCollection>
+            </Grid.Transitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <!-- profile button -->
+                <RowDefinition Height="70"/>
+                <!-- Trending -->
+                <RowDefinition Height="70"/>
+                <!-- Browse -->
+                <RowDefinition Height="70"/>
+                <!-- Favorites -->
+                <RowDefinition Height="70"/>
+                <!-- Settings -->
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Border Grid.ColumnSpan="3"
+                    Grid.Row="0" VerticalAlignment="Bottom"
+                    Height="1" 
+                    Background="SlateGray"/>
+            <Border Grid.ColumnSpan="3"
+                    Grid.Row="1" VerticalAlignment="Bottom"
+                    Height="1" 
+                    Background="SlateGray"/>
+            <Border Grid.ColumnSpan="3"
+                    Grid.Row="2" VerticalAlignment="Bottom"
+                    Height="1" 
+                    Background="SlateGray"/>
+            <Border Grid.ColumnSpan="3"
+                    Grid.Row="3" VerticalAlignment="Bottom"
+                    Height="1" 
+                    Background="SlateGray"/>
+            <Border Grid.ColumnSpan="3"
+                    Grid.Row="4" VerticalAlignment="Bottom"
+                    Height="1" 
+                    Background="SlateGray"/>
+            
+            <!-- avatar & profile button -->
+            
+            <Button Name="profileButton2"
+                    BorderThickness="0"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="profileButton_Click"
+                    Loaded="profileButton2_Loaded">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image  Name="avatar2"
+                            Grid.Column="0"
+                            Height="55" Width="55"
+                            VerticalAlignment="Center" HorizontalAlignment="Center"
+                            Source="{Binding image_url_75x75}"/>
+                    <TextBlock  Name="usernameBlock2"
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="{Binding login_name}" FontSize="24" />
+                </Grid>
+            </Button>
+            
+            <!-- Trending -->
+            <Button Name="trendingButton"
+                    BorderThickness="0"
+                    Grid.Row="1"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="trendingButton_Click">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="trendingImage"
+                           Grid.Column="0"
+                           Height="55" Width="55"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock  
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="Trending" FontSize="24" />
+                </Grid>
+            </Button>
+            
+            <!-- Browse -->
+            <Button Name="browseButton"
+                    BorderThickness="0"
+                    Grid.Row="2"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="browseButton_Click">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="browseImage"
+                           Grid.Column="0"
+                           Height="55" Width="55"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock  
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="Browse" FontSize="24" />
+                </Grid>
+            </Button>
+
+            <!-- Favorites -->
+            <Button Name="favoritesButton"
+                    BorderThickness="0"
+                    Grid.Row="3"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="favoritesButton_Click">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="favoritesImage"
+                           Grid.Column="0"
+                           Height="55" Width="55"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock  
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="Favorites" FontSize="24" />
+                </Grid>
+            </Button>
+
+            <!-- Settings -->
+            <Button Name="settingsButton"
+                    BorderThickness="0"
+                    Grid.Row="4"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="settingsButton_Click">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="settingsImage"
+                           Grid.Column="0"
+                           Height="55" Width="55"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock  
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="Settings" FontSize="24" />
+                </Grid>
+            </Button>
+
+            <!-- About -->
+            <Button Name="aboutButton"
+                    BorderThickness="0"
+                    Grid.Row="5"
+                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                    Click="aboutButton_Click">
+                <Grid HorizontalAlignment="Left" VerticalAlignment="Center" Height="70">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Name="aboutImage"
+                           Grid.Column="0"
+                           Height="55" Width="55"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock  
+                                Grid.Column="2"
+                                VerticalAlignment="Center" HorizontalAlignment="Left"
+                                Foreground="White"
+                                Text="About" FontSize="24" />
+                </Grid>
+            </Button>
+
+        </Grid>
+
+        <!-- Status Block -->
+        <TextBlock Name="statusBlock"
+                   Grid.Column="1" 
+                   Grid.ColumnSpan="1"
+                   Width="auto"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                   Foreground="#FF22A44C"
+                   FontSize="30" FontWeight="SemiLight"
+                   Text="{Binding currentView}" FontFamily="Segoe UI Semilight"/>
+
+        <Rectangle Name="visibilityBlocker" 
+                   Grid.Column="0" Grid.ColumnSpan="6"
+                   Grid.Row="1" Grid.RowSpan="2"
+                   Canvas.ZIndex="3" Visibility="Collapsed"
+                   Fill="WhiteSmoke" Opacity="0.5"/>
+        <Rectangle Name="visibilityBlocker2" 
+                   Grid.Column="0" Grid.ColumnSpan="6"
+                   Grid.Row="1" Grid.RowSpan="2"
+                   Tapped="visibilityBlocker2_Tapped"
+                   Canvas.ZIndex="1" Visibility="Collapsed"
+                   Fill="WhiteSmoke" Opacity="0.5"/>
+
+        <Button Name="searchButton"
+                Grid.Column="3" Grid.ColumnSpan="1" HorizontalAlignment="Right" VerticalAlignment="Center" 
+                Grid.Row="0"
+                Canvas.ZIndex="3"
+                Click="searchButton_Click"
+                Loaded="searchButton_Loaded"
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"
+                Width="auto" Height="auto"
+                BorderThickness="0">
+            <Image
+                Source="Assets/Buttons/SearchButton.png"
+                Stretch="Uniform"
+                HorizontalAlignment="Left"
+                Height="45" Width="45">
+            </Image>
+            <Button.Transitions>
+                <TransitionCollection>
+                    <RepositionThemeTransition/>
+                </TransitionCollection>
+            </Button.Transitions>
+        </Button>
+
+        <!-- cart button-->
+        <Button Name="cartButton"
+                Grid.Column="4" HorizontalAlignment="Right"  VerticalAlignment="Center" 
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"
+                Width="auto" Height="auto"
+                BorderThickness="0"
+                Click="cartButton_Click">
+            <Image
+                Source="Assets/Buttons/CartShadowed.png"
+                Stretch="Uniform"
+                HorizontalAlignment="Left"
+                Height="70" Width="70">
+            </Image>
+        </Button>
+
+        <Grid Name="NameAndPhoto"
+              Grid.Column="5"
+              Canvas.ZIndex="1"
+              Loaded="NameAndPhoto_Loaded">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="63" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="95*" />
+            </Grid.ColumnDefinitions>
+            
+            <Image Name="avatar"
+                   Grid.Column="0" Margin="5,5,5,5"
+                   VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   Source="{Binding image_url_75x75}"/>
+            <Button Name="profileButton" BorderThickness="0" Background="Transparent"
+                    Grid.Column="2" VerticalAlignment="Stretch" HorizontalAlignment="Left" HorizontalContentAlignment="Left"
+                    Click="profileButton_Click">
+                <TextBlock Name="usernameBlock"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Foreground="SlateGray"
+                           Text="{Binding login_name}" FontSize="24" />
+            </Button>
+        </Grid>
+        
+        <Button Name="loginButton"
+                Canvas.ZIndex="5"
+                Grid.Column="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                Loaded="loginButton_Loaded"
+                
+                Click="loginButton_Click">
+            <TextBlock 
+                x:Uid="LoginButton"
+                Text="Login here" 
+                Foreground="SlateGray" FontSize="26"/>
+        </Button>
+        
+        <!-- Log In Enforcer.
+                Make the user log in -->
+        <Grid Name="loginEnforcer"
+              Canvas.ZIndex="4"
+            Grid.RowSpan="3" Grid.ColumnSpan="8">
+            <Rectangle Fill="White" 
+                       Opacity="0.8"/>
+            <TextBlock 
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,100,0,0"
+                FontSize="40"
+                Foreground="Blue"
+                Text="Please Log In to Your Etsy Account."/>
+        </Grid>
+        
+        <!-- Search Box -->
+        <TextBox Name="searchBoxLandscape"
+                 HorizontalAlignment="Stretch"
+                 FontSize="36"      GotFocus="searchBox_GotFocus" LostFocus="searchBox_LostFocus"
+                 Grid.Column="2"
+                 Canvas.ZIndex="3"
+                 Visibility="Collapsed"/>
+        <!-- hide the search line. might get rid of it-->
+        <Rectangle Name="searchLine"
+            Canvas.ZIndex="2" Grid.Column="2"
+            VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+            Fill="#FFE22C2C" Stroke="#FFEC0B0B" StrokeThickness="1"
+            Height="0" 
+            Margin="0,0,0,5" Visibility="Collapsed"/>
+        
+        <TextBox Name="searchBoxPortrait" 
+                 Grid.Column="1" Grid.Row="1"
+                 Canvas.ZIndex="2"
+                 VerticalAlignment="Top" 
+                 GotFocus="searchBox_GotFocus"
+                 LostFocus="searchBox_LostFocus"
+                 Visibility="Collapsed"
+                 Height="63"/>
+        
+                
+        <ListView   x:Name="productList"    
+                    Canvas.ZIndex="0"
+                    Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="6"
+                    VerticalAlignment="Stretch"                            
+                    HorizontalAlignment="Stretch"                                        
+                    SelectionChanged="productList_SelectionChanged"
+                    CanDragItems="False"
+                    SelectionMode="Single" 
+                    IncrementalLoadingThreshold="5"
+                    
+                    Visibility="Collapsed">
+            
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Name="wGrid" MaximumRowsOrColumns="4" Orientation="Horizontal"
+                              ItemWidth="342" 
+                              HorizontalAlignment="Center"
+                              >
+                    </WrapGrid>
+
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <myUserControl:ItemInListView/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        
+        </ListView>
+
+        <ListView   x:Name="browseListView"    
+                    Canvas.ZIndex="0"
+                    Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="6"
+                    VerticalAlignment="Stretch"                            
+                    HorizontalAlignment="Stretch"                                        
+                    CanDragItems="False"
+                    SelectionMode="Single" 
+                    Loaded="browseListView_Loaded"
+                    SelectionChanged="browseListView_SelectionChanged">
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Name="wGrid2" MaximumRowsOrColumns="4" Orientation="Horizontal"
+                              ItemWidth="400" 
+                              HorizontalAlignment="Center"
+                              Loaded="wGrid2_Loaded">
+                    </WrapGrid>
+
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <myUserControl:MainBrowseSegment/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+        
+        
+        <!-- Advertise -->
+        <StackPanel
+            Name="adsPanel"
+            Canvas.ZIndex="5"
+            Grid.Row="2" Grid.ColumnSpan="8"
+            Orientation="Horizontal"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Loaded="adsPanel_Loaded">
+            <UI:AdControl Name="adBottom"
+                          IsAutoRefreshEnabled="True"
+                          IsEnabled="True"
+                          Height="0"
+                          Width="728"
+                          AdUnitId="203068" ApplicationId="68003c26-6f48-42c2-8b7d-0def16ca079c"/>
+            <Button Name="purchaseButton"
+                    Width="auto"
+                    Height="90"
+                    BorderThickness="0"
+                    Background="Red"
+                    Click="purchaseButton_Click"
+                    Visibility="Collapsed">
+                <StackPanel>
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        FontSize="22"
+                        Text="Remove"/>
+                    <TextBlock
+                        FontSize="22"
+                        HorizontalAlignment="Center"
+                        Text="Ads"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-ky-cyrl"
+"ResourceDimensions"		"language-ky-kg"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\split.language-ky-cyrl.pri"			"resources.pri"

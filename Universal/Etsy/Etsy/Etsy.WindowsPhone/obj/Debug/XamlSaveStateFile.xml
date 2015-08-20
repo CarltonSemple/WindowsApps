@@ -1,0 +1,16 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\owner\documents\unified windows\etsy\etsy\etsy.windowsphone\obj\debug\intermediatexaml\etsy.windowsphone.exe" HashGuid="4d94a658-c91a-952d-b2d4-40539aece464" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\neutral\microsoft.admediator.core.dll" HashGuid="bfb221d9-5f2c-5430-9f44-20719b5fa8c9" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\neutral\microsoft.admediator.windowsphone81.dll" HashGuid="0afc9f8f-6130-2dab-3e0b-bf33c6edb68a" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.advertising.mobile.display\8.1\references\commonconfiguration\neutral\microsoft.advertising.mobile.common.winmd" HashGuid="a6fe07e9-10d1-3240-762b-cf2a1a65f0b4" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.advertising.mobile.display\8.1\references\commonconfiguration\neutral\microsoft.advertising.mobile.display.winmd" HashGuid="cc0fb2e7-7a64-f70e-2997-2ad4fbf1cad0" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.advertising.mobile.display\8.1\references\commonconfiguration\neutral\microsoft.advertising.mobile.ui.winmd" HashGuid="d0066665-e198-0d8c-b6ce-7103d6c04165" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="c:\users\owner\documents\unified windows\etsy\packages\adduplexwinphone81.8.5.0.5\lib\portable-win81+wpa81\adduplex.universal.controls.winphone.xaml.winmd" HashGuid="041cc2c9-303b-df60-bba2-bb71a4933fb4" />
+    <ReferenceAssembly PathName="c:\users\owner\documents\unified windows\etsy\packages\adduplexwinphone81.8.5.0.5\lib\portable-win81+wpa81\adduplex.universal.winphone.winrt.winmd" HashGuid="19115a1c-7d72-4425-8ed4-9bcdb868c955" />
+    <ReferenceAssembly PathName="c:\users\owner\documents\unified windows\etsy\packages\microsoft.admediator.windowsphone81.adduplex.1.0.12\lib\wpa\microsoft.admediator.windowsphone81.adduplex.dll" HashGuid="f849aad4-71f4-1617-4d80-a047e07b6b6d" />
+    <ReferenceAssembly PathName="c:\users\owner\documents\unified windows\etsy\packages\newtonsoft.json.6.0.6\lib\portable-net40+sl5+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="9e796421-3b84-3ec5-6e39-cb6d41d020b7" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

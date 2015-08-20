@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ITCHYBANDIT</Machine>
+    <WindowsUser>Owner</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>27347iTchyBandit.Artsy</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>2D833CD2BF0B499F8AB21738CE566A9C90E7FBB20DE29376757AA9572F7D8EBB</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>27347iTchyBandit.Artsy_1.1.0.0_neutral__0b16w2pc6mmmc</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>27347iTchyBandit.Artsy_0b16w2pc6mmmc!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>27347iTchyBandit.Artsy</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=7EB8FFA4-5A95-4023-BE19-33A76B2F7B92</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-02-13T16:36:21.270</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\Artsy.exe">
+      <PackagePath>Artsy.exe</PackagePath>
+      <Modified>2015-02-13T16:36:15.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI.winmd">
+      <PackagePath>Microsoft.Advertising.WinRT.UI.winmd</PackagePath>
+      <Modified>2013-09-13T16:42:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\References\CommonConfiguration\neutral\MicrosoftAdvertising.winmd">
+      <PackagePath>MicrosoftAdvertising.winmd</PackagePath>
+      <Modified>2013-09-13T16:42:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+      <Modified>2013-10-02T17:08:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+      <Modified>2013-10-02T17:08:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\packages\Newtonsoft.Json.6.0.6\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-10-27T12:52:20.714</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\AdSettingsFlyout.xbf">
+      <PackagePath>Microsoft.Advertising.WinRT.UI\AdSettingsFlyout.xbf</PackagePath>
+      <Modified>2013-09-13T16:42:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Advertising.WinRT.UI\Themes\Generic.xbf</PackagePath>
+      <Modified>2013-09-13T16:42:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\bootstrap.html">
+      <PackagePath>Microsoft.Advertising.WinRT.UI\bootstrap.html</PackagePath>
+      <Modified>2013-09-13T16:43:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSAdvertisingXaml\8.1\Redist\CommonConfiguration\neutral\Microsoft.Advertising.WinRT.UI\ormma.js">
+      <PackagePath>Microsoft.Advertising.WinRT.UI\ormma.js</PackagePath>
+      <Modified>2013-09-13T16:46:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\620x300.scale-140.png">
+      <PackagePath>620x300.scale-140.png</PackagePath>
+      <Modified>2015-01-08T22:19:08.791</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\150x150\150x150.scale-100.png">
+      <PackagePath>Assets\150x150\150x150.scale-100.png</PackagePath>
+      <Modified>2015-01-09T03:39:17.322</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\150x150\150x150.scale-140.png">
+      <PackagePath>Assets\150x150\150x150.scale-140.png</PackagePath>
+      <Modified>2015-01-09T03:39:17.330</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\150x150\150x150.scale-180.png">
+      <PackagePath>Assets\150x150\150x150.scale-180.png</PackagePath>
+      <Modified>2015-01-09T03:39:17.337</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\30x30\30x30.scale-100.png">
+      <PackagePath>Assets\30x30\30x30.scale-100.png</PackagePath>
+      <Modified>2015-01-09T03:22:50.181</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\30x30\30x30.scale-140.png">
+      <PackagePath>Assets\30x30\30x30.scale-140.png</PackagePath>
+      <Modified>2015-01-09T03:22:50.186</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\30x30\30x30.scale-180.png">
+      <PackagePath>Assets\30x30\30x30.scale-180.png</PackagePath>
+      <Modified>2015-01-09T03:22:50.192</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x150\310x150.scale-100.png">
+      <PackagePath>Assets\310x150\310x150.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:35:46.139</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x150\310x150.scale-140.png">
+      <PackagePath>Assets\310x150\310x150.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:35:46.145</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x150\310x150.scale-180.png">
+      <PackagePath>Assets\310x150\310x150.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:35:46.151</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x310\310x310.scale-100.png">
+      <PackagePath>Assets\310x310\310x310.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:29:53.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x310\310x310.scale-140.png">
+      <PackagePath>Assets\310x310\310x310.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:29:53.260</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\310x310\310x310.scale-180.png">
+      <PackagePath>Assets\310x310\310x310.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:29:53.273</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\70x70\70x70.scale-100.png">
+      <PackagePath>Assets\70x70\70x70.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:42:36.495</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\70x70\70x70.scale-140.png">
+      <PackagePath>Assets\70x70\70x70.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:42:36.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\70x70\70x70.scale-180.png">
+      <PackagePath>Assets\70x70\70x70.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:42:36.505</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\70x70\70x70.scale-80.png">
+      <PackagePath>Assets\70x70\70x70.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-18T05:29:53.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:39:17.322</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:39:17.330</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Logo.scale-180.png">
+      <PackagePath>Assets\Logo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:39:17.337</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Logo.scale-80.png">
+      <PackagePath>Assets\Logo.scale-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-18T05:33:08.547</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:22:50.181</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:22:50.186</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SmallLogo.scale-180.png">
+      <PackagePath>Assets\SmallLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:22:50.192</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <Modified>2015-01-09T00:27:07.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <Modified>2015-01-09T00:29:00.596</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\SplashScreen.scale-180.png">
+      <PackagePath>Assets\SplashScreen.scale-180.png</PackagePath>
+      <Modified>2015-01-09T00:31:01.128</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\620x300.scale-100.png">
+      <PackagePath>Assets\Splash\620x300.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-17T07:22:07.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\620x300.scale-140.png">
+      <PackagePath>Assets\Splash\620x300.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-17T07:22:24.487</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\620x300.scale-180.png">
+      <PackagePath>Assets\Splash\620x300.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-17T07:22:38.517</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\splash620x300.scale-180.png">
+      <PackagePath>Assets\Splash\splash620x300.scale-180.png</PackagePath>
+      <Modified>2015-01-17T07:22:38.517</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\splash620x300.scale-100.png">
+      <PackagePath>Assets\Splash\splash620x300.scale-100.png</PackagePath>
+      <Modified>2015-01-17T07:22:07.639</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Splash\splash620x300.scale-140.png">
+      <PackagePath>Assets\Splash\splash620x300.scale-140.png</PackagePath>
+      <Modified>2015-01-17T07:22:24.487</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:15:45.471</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:15:53.151</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\StoreLogo.scale-180.png">
+      <PackagePath>Assets\StoreLogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-01-09T03:15:53.162</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Store\50x50.scale-100.png">
+      <PackagePath>Assets\Store\50x50.scale-100.png</PackagePath>
+      <Modified>2015-01-09T03:15:45.471</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Store\50x50.scale-140.png">
+      <PackagePath>Assets\Store\50x50.scale-140.png</PackagePath>
+      <Modified>2015-01-09T03:15:53.151</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\Assets\Store\50x50.scale-180.png">
+      <PackagePath>Assets\Store\50x50.scale-180.png</PackagePath>
+      <Modified>2015-01-09T03:15:53.162</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\ButtonIndicator.png">
+      <PackagePath>Assets\ButtonIndicator.png</PackagePath>
+      <Modified>2015-01-08T06:20:02.081</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\ButtonIndicator_long.png">
+      <PackagePath>Assets\ButtonIndicator_long.png</PackagePath>
+      <Modified>2015-01-08T06:25:44.267</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\ButtonIndicator_skinny.png">
+      <PackagePath>Assets\ButtonIndicator_skinny.png</PackagePath>
+      <Modified>2015-02-13T07:13:51.019</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Buttons\Cart.png">
+      <PackagePath>Assets\Buttons\Cart.png</PackagePath>
+      <Modified>2015-01-08T01:28:09.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Buttons\CartShadowed.png">
+      <PackagePath>Assets\Buttons\CartShadowed.png</PackagePath>
+      <Modified>2015-01-08T01:57:22.944</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Buttons\Home.png">
+      <PackagePath>Assets\Buttons\Home.png</PackagePath>
+      <Modified>2015-01-08T00:53:12.630</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Buttons\SearchButton.png">
+      <PackagePath>Assets\Buttons\SearchButton.png</PackagePath>
+      <Modified>2015-01-08T00:52:58.802</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Favorites\HeartEmpty.png">
+      <PackagePath>Assets\Favorites\HeartEmpty.png</PackagePath>
+      <Modified>2015-01-05T03:01:47.440</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Favorites\HeartEmpty_shadow.png">
+      <PackagePath>Assets\Favorites\HeartEmpty_shadow.png</PackagePath>
+      <Modified>2015-01-05T03:38:30.910</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\Favorites\HeartFilled.png">
+      <PackagePath>Assets\Favorites\HeartFilled.png</PackagePath>
+      <Modified>2015-01-05T02:59:55.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\PaymentLogos\check.png">
+      <PackagePath>Assets\PaymentLogos\check.png</PackagePath>
+      <Modified>2014-12-14T00:29:58.794</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\PaymentLogos\paypal.png">
+      <PackagePath>Assets\PaymentLogos\paypal.png</PackagePath>
+      <Modified>2014-12-14T00:14:36.705</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\SadFace.png">
+      <PackagePath>Assets\SadFace.png</PackagePath>
+      <Modified>2015-02-10T21:10:46.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\x.png">
+      <PackagePath>Assets\x.png</PackagePath>
+      <Modified>2015-01-06T18:09:02.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Shared\Assets\edc_badge1.gif">
+      <PackagePath>Assets\edc_badge1.gif</PackagePath>
+      <Modified>2015-01-08T21:34:29.566</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.942</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\CartButton.xbf">
+      <PackagePath>CartButton.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.047</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemInCart.xbf">
+      <PackagePath>ItemInCart.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemInFavoritesList.xbf">
+      <PackagePath>ItemInFavoritesList.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.064</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemInFavoritesList_Phone.xbf">
+      <PackagePath>ItemInFavoritesList_Phone.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemInListView.xbf">
+      <PackagePath>ItemInListView.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemInListView_Phone.xbf">
+      <PackagePath>ItemInListView_Phone.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ListOptionsText.xbf">
+      <PackagePath>ListOptionsText.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\MainBrowseSegment.xbf">
+      <PackagePath>MainBrowseSegment.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.090</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\MainBrowseSegment_Phone.xbf">
+      <PackagePath>MainBrowseSegment_Phone.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ShopFavorite.xbf">
+      <PackagePath>ShopFavorite.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ShopFavorite_Phone.xbf">
+      <PackagePath>ShopFavorite_Phone.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.111</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SubBrowseSegment.xbf">
+      <PackagePath>SubBrowseSegment.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.115</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SubBrowseSegment_Phone.xbf">
+      <PackagePath>SubBrowseSegment_Phone.xbf</PackagePath>
+      <Modified>2015-02-13T16:36:15.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\UserReview.xbf">
+      <PackagePath>UserReview.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.124</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\AboutPage.xbf">
+      <PackagePath>AboutPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\CartPage.xbf">
+      <PackagePath>CartPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.952</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\CheckoutPage.xbf">
+      <PackagePath>CheckoutPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.958</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\FavoritesPage.xbf">
+      <PackagePath>FavoritesPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.962</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ItemDetailPage1.xbf">
+      <PackagePath>ItemDetailPage1.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\LoginPage.xbf">
+      <PackagePath>LoginPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.991</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ProfilePage.xbf">
+      <PackagePath>ProfilePage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:46.996</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ReviewsPage.xbf">
+      <PackagePath>ReviewsPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.001</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SearchPage.xbf">
+      <PackagePath>SearchPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.007</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SegmentBrowsePage.xbf">
+      <PackagePath>SegmentBrowsePage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.013</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SettingsPage.xbf">
+      <PackagePath>SettingsPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\ShopPage.xbf">
+      <PackagePath>ShopPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\SubSectionPage.xbf">
+      <PackagePath>SubSectionPage.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.037</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\Themes\Generic.xbf">
+      <PackagePath>Themes\Generic.xbf</PackagePath>
+      <Modified>2015-02-13T05:30:47.043</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\Artsy.xr.xml">
+      <PackagePath>Artsy.xr.xml</PackagePath>
+      <Modified>2015-02-10T19:49:13.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-02-13T16:36:16.436</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="Etsy.MainBrowseSegment_Phone"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Etsy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <!-- Design meant for listing the main browse sections -->
+    <Grid>
+
+        <Image Name="image"
+               Stretch="UniformToFill"
+               HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+               Source="{Binding image_url}">
+        </Image>
+
+        <!-- fading overlay -->
+        <Rectangle 
+            Canvas.ZIndex="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Opacity="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Transparent" Offset="0.293"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <!-- Title overlay -->
+        <TextBlock Name="title"
+                   Text="{Binding name}"
+                   FontSize="24"
+                   Foreground="Black" FontWeight="Medium"
+                   HorizontalAlignment="Center" VerticalAlignment="Top"
+                   Margin="5,5,0,0"
+                   Canvas.ZIndex="2"/>
+
+    </Grid>
+</UserControl>

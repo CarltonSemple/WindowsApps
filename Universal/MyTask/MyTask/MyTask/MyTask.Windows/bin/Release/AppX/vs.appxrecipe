@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ITCHYBANDIT</Machine>
+    <WindowsUser>Owner</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>505a6040-714e-4b1d-a9d7-4f318a4f0d07</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\obj\Release\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>B43CF478AB8DAF87A3CE0D4AA3751BE07013A3224E46B2C368B57B8B497346AA</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>505a6040-714e-4b1d-a9d7-4f318a4f0d07_1.0.0.0_neutral__ckpvgz13cfhxc</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>505a6040-714e-4b1d-a9d7-4f318a4f0d07_ckpvgz13cfhxc!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>505a6040-714e-4b1d-a9d7-4f318a4f0d07</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Owner</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-06-30T04:17:48.030</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\MyTask.Windows.exe">
+      <PackagePath>MyTask.Windows.exe</PackagePath>
+      <Modified>2014-06-30T04:17:47.699</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-06-30T04:17:47.368</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\CustomControls\TaskExpansiveControl.xbf">
+      <PackagePath>CustomControls\TaskExpansiveControl.xbf</PackagePath>
+      <Modified>2014-06-30T04:17:47.369</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\TaskUserControl.xbf">
+      <PackagePath>TaskUserControl.xbf</PackagePath>
+      <Modified>2014-06-30T04:17:47.370</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-06-30T04:17:47.368</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\MyTask.Windows.xr.xml">
+      <PackagePath>MyTask.Windows.xr.xml</PackagePath>
+      <Modified>2014-06-30T04:15:35.392</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\MyTask\MyTask\MyTask\MyTask.Windows\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-06-30T04:17:47.860</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

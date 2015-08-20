@@ -1,0 +1,12 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-180"
+"ResourceDimensions"		"scale-180"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\split.scale-180.pri"			"resources.pri"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Store\dark50x50.scale-180.png"			"Assets\Store\dark50x50.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\Splash\splash_mobile.scale-180.png"			"Assets\Splash\splash_mobile.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\71x71\71x71.scale-180.png"			"Assets\71x71\71x71.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\44x44\44x44.scale-180.png"			"Assets\44x44\44x44.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\310x150\dark310x150.scale-180.png"			"Assets\310x150\dark310x150.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.WindowsPhone\obj\Release\PackageLayout\Assets\150x150\dark150x150.scale-180.png"			"Assets\150x150\dark150x150.scale-180.png"

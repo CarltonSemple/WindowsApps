@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a16bc840-10cd-4d64-9cd1-53e917f1255d</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Etsy</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CartButton.xaml.cs">
+      <DependentUpon>CartButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataBinding\IncrementalSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataBinding\IPagedResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataBinding\IPagedSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataBinding\ListResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataBinding\ShopsGetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\AuthenticationAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\CartAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\dataGET.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\FavoritesAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\FileIO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\KeyEnumPair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\OAuthBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\OAuthBaseUpdated.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\Parameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\SearchRefinery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\ShopAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataTransfer\UserAccess.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ItemInCart.xaml.cs">
+      <DependentUpon>ItemInCart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemInFavoritesList.xaml.cs">
+      <DependentUpon>ItemInFavoritesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemInFavoritesList_Phone.xaml.cs">
+      <DependentUpon>ItemInFavoritesList_Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemInListView.xaml.cs">
+      <DependentUpon>ItemInListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ItemInListView_Phone.xaml.cs">
+      <DependentUpon>ItemInListView_Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ListOptionsText.xaml.cs">
+      <DependentUpon>ListOptionsText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainBrowseSegment.xaml.cs">
+      <DependentUpon>MainBrowseSegment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainBrowseSegment_Phone.xaml.cs">
+      <DependentUpon>MainBrowseSegment_Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Browse\BrowseSection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Cart\Cart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Cart\CartListing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Cart\ShopCart.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Guest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Image\Image.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Image\ImageList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Image\Pagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Image\Params.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\KeyEnumPair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Listing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\FavoriteListingContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\FavoritesListingsDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\List.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\Page Parameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\Pagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\List\ProductListDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shipping\Shipping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shipping\ShippingHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shipping\sPagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shipping\sParams.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\About\AboutDeserializeCapturer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\About\RelatedLinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\About\ShopAbout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\About\ShopImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\FeedbackInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\GeneralInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Owner Basics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Owner Detailed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Pagination.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Params.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\PaymentTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\PaymentTemplateHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Ratings_Aggregate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Related Links.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Shop.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\ShopResultsHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\ShopSection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\Story.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Shop\User Feedback\Feedback.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\Address.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\dataFetch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\FeedbackInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\User.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\UserContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\UserDeserializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\User\UserProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Variations\Option.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Variations\Variations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Variations\VariationsProperty.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Security\DataEncryption.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShopFavorite.xaml.cs">
+      <DependentUpon>ShopFavorite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ShopFavorite_Phone.xaml.cs">
+      <DependentUpon>ShopFavorite_Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SubBrowseSegment.xaml.cs">
+      <DependentUpon>SubBrowseSegment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SubBrowseSegment_Phone.xaml.cs">
+      <DependentUpon>SubBrowseSegment_Phone.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI Extras\Loading.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserReview.xaml.cs">
+      <DependentUpon>UserReview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\ButtonIndicator.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\ButtonIndicator_long.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\ButtonIndicator_skinny.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Buttons\Cart.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Buttons\CartShadowed.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Buttons\Home.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Buttons\SearchButton.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\edc_badge1.gif" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Favorites\HeartEmpty.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Favorites\HeartEmpty_shadow.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Favorites\HeartFilled.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\PaymentLogos\check.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\PaymentLogos\paypal.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\SadFace.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)CartButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemInCart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemInFavoritesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemInFavoritesList_Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemInListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ItemInListView_Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ListOptionsText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainBrowseSegment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainBrowseSegment_Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ShopFavorite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ShopFavorite_Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SubBrowseSegment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SubBrowseSegment_Phone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)UserReview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+  </ItemGroup>
+</Project>

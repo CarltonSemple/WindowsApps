@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-sd-arab"
+"ResourceDimensions"		"language-sd-arab-pk"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\split.language-sd-arab.pri"			"resources.pri"

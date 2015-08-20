@@ -1,0 +1,18 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-180"
+"ResourceDimensions"		"scale-180"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\split.scale-180.pri"			"resources.pri"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\StoreLogo.scale-180.png"			"Assets\StoreLogo.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\Store\50x50.scale-180.png"			"Assets\Store\50x50.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\SplashScreen.scale-180.png"			"Assets\SplashScreen.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\Splash\splash620x300.scale-180.png"			"Assets\Splash\splash620x300.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\Splash\620x300.scale-180.png"			"Assets\Splash\620x300.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\SmallLogo.scale-180.png"			"Assets\SmallLogo.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\Logo.scale-180.png"			"Assets\Logo.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\70x70\70x70.scale-180.png"			"Assets\70x70\70x70.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\310x310\310x310.scale-180.png"			"Assets\310x310\310x310.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\310x150\310x150.scale-180.png"			"Assets\310x150\310x150.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\30x30\30x30.scale-180.png"			"Assets\30x30\30x30.scale-180.png"
+"C:\Users\Owner\Documents\Unified Windows\Etsy\Etsy\Etsy.Windows\obj\Release\PackageLayout\Assets\150x150\150x150.scale-180.png"			"Assets\150x150\150x150.scale-180.png"

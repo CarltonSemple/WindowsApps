@@ -1,0 +1,632 @@
+﻿<Page xmlns:WindowsPhone81="using:Microsoft.AdMediator.WindowsPhone81"  xmlns:UI="using:Microsoft.Advertising.Mobile.UI" 
+    x:Class="Etsy.ItemDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Etsy"
+    xmlns:common="using:Etsy.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+    xmlns:myUserControl="using:Etsy"
+    
+    mc:Ignorable="d">
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid 
+          Background="White">
+        <!-- split up the whole page evenly -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45*" />
+            <ColumnDefinition Width="55*" />
+        </Grid.ColumnDefinitions>
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <!--<RowDefinition Height="20"/>-->
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="55*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid   Background="SlateGray"
+                Grid.ColumnSpan="2"
+                Canvas.ZIndex="3"
+                DataContext="{Binding listing}">
+            <TextBlock x:Name="pageTitle" 
+                       Text="{Binding title}" 
+                       FontSize="32"
+                       Grid.Column="1" 
+                       IsHitTestVisible="false" 
+                       Foreground="White"
+                       Loaded="pageTitle_Loaded"
+                       TextWrapping="NoWrap" VerticalAlignment="Center"/>
+        </Grid>
+
+        <!-- Images -->
+        <!-- Main Image -->
+        <Image  Name="bigImage"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Margin="0,0,0,0"
+                Canvas.ZIndex="2"
+                    Grid.Row="1" Grid.RowSpan="2"
+                    Grid.Column="0"
+                Stretch="Uniform"
+                    Loaded="bigImage_Loaded"/>
+
+        <!-- List of Images -->
+        <ListView   Name="imgListView"
+                        HorizontalAlignment="Left" VerticalAlignment="Center"
+                        ItemsSource="{Binding listingImages}"
+                        SelectionChanged="imgListView_SelectionChanged"
+                        Grid.Row="1" Grid.RowSpan="2"
+                        Grid.Column="0" Canvas.ZIndex="3"
+                        Width="75"
+                    Background="White"
+                    Opacity="0.5"
+                        Loaded="imgListView_Loaded"
+                        >
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding url_75x75}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Border -->
+        <Border Name="border"
+                HorizontalAlignment="Right"
+                Grid.Row="1" Grid.RowSpan="2"
+                Grid.Column="0"
+                Canvas.ZIndex="2"
+                Width="1"
+                Background="Red"/>
+
+        <Border Name="border_portrait"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Canvas.ZIndex="2"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Height="1"
+                Background="Red"/>
+
+        <Hub Name="mainHub"
+             Foreground="Black"
+             Grid.Row="1" Grid.RowSpan="2"
+             Grid.Column="1" Grid.ColumnSpan="1"
+             Margin="0,25,0,0">
+
+            <!-- Title, Options, and Details -->
+            <HubSection Name="optionsSection"
+                        Margin="0,0,40,0" BorderBrush="#FFBDB2B2">
+                <DataTemplate>
+                    <Grid Margin="0,-35,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Name="optionsStack"
+                            Grid.Row="0"
+                            HorizontalAlignment="Stretch">
+
+                            <!-- Title -->
+                            <TextBlock x:Name="ti" 
+                                       DataContext="{Binding listing}"
+                                       Text="{Binding title}"
+                                       FontSize="18"
+                                       Margin="0,0,0,5"
+                                       Height="auto"
+                                       TextWrapping="WrapWholeWords"
+                                       Foreground="DarkSlateBlue"
+                                       FontWeight="Bold" TextAlignment="Justify" />
+
+                            <!-- Quantity -->
+                            <Grid Name="quantityPanel"
+                                  Margin="0,-5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30*" />
+                                    <ColumnDefinition Width="70*" />
+                                </Grid.ColumnDefinitions>
+                                <!-- quantity -->
+                                <TextBlock Name="quantityBlock"
+                                       Height="auto" Grid.Column="0"
+                                       FontSize="22" FontWeight="Bold"
+                                       Text="Quantity"
+                                       HorizontalAlignment="Left" VerticalAlignment="Center"
+                                       Margin="0,0,0,0"
+                                       Foreground="Black"
+                                       Loaded="quantityBlock_Loaded"/>
+                                <ComboBox Name="quantityBox"
+                                          Grid.Column="1"
+                                          Background="LightGray" Foreground="Black"
+                                          HorizontalAlignment="Stretch"
+                                          VerticalAlignment="Center"
+                                          Loaded="quantityBox_Loaded" FontFamily="Global User Interface"/>
+                            </Grid>
+
+                            <!-- Variation 1 -->
+                            <Grid Name="variation1_panel"
+                                  Height="auto"
+                                  Margin="0,-5,0,0"
+                                  Loaded="variation1_panel_Loaded">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="50*" />
+                                </Grid.ColumnDefinitions>
+                                <!-- variation 1 -->
+                                <TextBlock Name="var1Block"
+                                       Height="auto" Grid.Column="0"
+                                       FontSize="22" FontWeight="Bold"
+                                       DataContext="{Binding variation1}"
+                                       Text="{Binding formatted_name}"
+                                       HorizontalAlignment="Left"
+                                       Margin="0,0,0,0"
+                                       Foreground="Black"
+                                       />
+                                <ComboBox Name="var1Box"
+                                      Grid.Column="1"
+                                          Margin="5,0,0,0"
+                                          Background="LightGray" Foreground="Black"
+                                      HorizontalAlignment="Stretch"
+                                      VerticalAlignment="Stretch"
+                                      DisplayMemberPath="value"
+                                      FontFamily="Global User Interface"
+                                          Loaded="var1Box_Loaded">
+
+                                </ComboBox>
+
+                            </Grid>
+
+                            <!-- Variation 2-->
+                            <Grid Name="variation2_panel"
+                                  Height="auto"
+                                  Margin="0,-5,0,0"
+                                  Loaded="variation2_panel_Loaded">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*" />
+                                    <ColumnDefinition Width="50*" />
+                                </Grid.ColumnDefinitions>
+                                <!-- variation 2 -->
+                                <TextBlock Name="var2Block"
+                                       Height="auto" Grid.Column="0"
+                                       FontSize="22" FontWeight="Bold"
+                                       DataContext="{Binding variation2}"
+                                       Text="{Binding formatted_name}"
+                                       HorizontalAlignment="Left"
+                                       Margin="0,0,0,0"
+                                       Foreground="#FF292828"
+                                       />
+                                <ComboBox Name="var2Box"
+                                      Grid.Column="1"
+                                          Margin="5,0,0,0"
+                                          Background="LightGray" Foreground="Black"
+                                      HorizontalAlignment="Stretch"
+                                      VerticalAlignment="Stretch"
+                                      DisplayMemberPath="value"
+                                      FontFamily="Global User Interface"
+                                      Loaded="var2Box_Loaded"/>
+                            </Grid>
+
+                            <!-- Add to Cart Button -->
+                            <Button Name="addToCart_Button"
+                                    Margin="0,10,0,0"
+                                Background="#FF86F539" BorderThickness="0"
+                                HorizontalAlignment="Stretch" FontFamily="Global User Interface"
+                                Click="addToCart_Button_Click">
+                                <TextBlock
+                                   Text="Add to Cart" 
+                                   FontSize="22"
+                                   HorizontalAlignment="Center"
+                                   Foreground="#FF292828"/>
+                            </Button>
+
+                        </StackPanel>
+
+                        
+
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            
+            <!-- Details -->
+            <HubSection Name="detailsSection"
+                        Margin="0,0,40,0">
+                <DataTemplate>
+
+                    <!-- details -->
+                    <Grid Name="detai"
+                            Grid.Row="1"
+                                Margin="0,-35,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="details"
+                                        Height="auto" HorizontalAlignment="Left"
+                                        FontSize="22" FontWeight="Bold"
+                                        Foreground="Black"/>
+                    
+                        <ScrollViewer 
+                                    Grid.Row="1"
+                                    VerticalScrollMode="Enabled"
+                                    VerticalScrollBarVisibility="Auto" HorizontalScrollMode="Disabled">
+                            <StackPanel Height="auto"
+                                                Background="White">
+                                <!-- Details Panel -->
+                                <TextBlock  Name="detailsBlock"
+                                                    DataContext="{Binding listing}"
+                                                    Foreground="#FF292828"
+                                                    MinHeight="800"
+                                                    FontFamily="Segoe UI Light"
+                                                    FontSize="16" 
+                                                    Margin="2,2,0,0"
+                                                    TextWrapping="WrapWholeWords"
+                                                    TextAlignment="Left"
+                                                    Text="{Binding description}"
+                                                    Height="auto"
+                                                    Visibility="Visible" 
+                                                    Loaded="detailsBlock_Loaded"/>
+                            </StackPanel>
+
+                        </ScrollViewer>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Payment Info & Shipping -->
+            <HubSection Name="shippingSection" 
+                        Margin="0,0,40,0"
+                        BorderBrush="#FFBDB2B2">
+                <DataTemplate>
+                    <StackPanel Name="shippingPanel"
+                                Margin="0,-35,0,0"
+                                Width="auto"
+                                    HorizontalAlignment="Stretch"
+                                    Visibility="Visible">
+                        <!-- payment methods -->
+                        <TextBlock  Text="Payment Methods"
+                                    FontSize="22"
+                                    TextWrapping="WrapWholeWords"
+                                    TextAlignment="Left"
+                                    Foreground="Black" FontWeight="Bold"/>
+
+                        <StackPanel Name="paymentOptions" Orientation="Horizontal"
+                                    Margin="0,5,0,0">
+                            <TextBlock Name="bankTransfer" 
+                                       Height="20"  Width="0"
+                                       Text="Bank Transfer" 
+                                       Foreground="Black" FontWeight="Bold"
+                                       Loaded="bankTransfer_Loaded"/>
+
+                            <Image Name="check"
+                                       Height="20"  Width="0"
+                                       Source="Assets/PaymentLogos/check.png" 
+                                   Loaded="check_Loaded"/>
+
+                            <TextBlock Name="moneyOrder"
+                                       Height="20" Width="0"
+                                       Text="Money Order" 
+                                       Foreground="Black" FontWeight="Bold"
+                                       Loaded="moneyOrder_Loaded"/>
+
+                            <TextBlock Name="otherPayment"
+                                       Height="20" Width="0"
+                                       Text="Other" 
+                                       Foreground="Black" FontWeight="Bold" 
+                                       Loaded="otherPayment_Loaded"/>
+
+                            <Image Name="payPal"
+                                       Height="20" Width="0"
+                                       Source="Assets/PaymentLogos/paypal.png" 
+                                   Loaded="payPal_Loaded"/>
+
+                            <TextBlock Name="creditCard"
+                                       Height="20" Width="0"
+                                       Text="Credit Card" 
+                                       Foreground="Black" FontWeight="Bold"  
+                                       Loaded="creditCard_Loaded"/>
+                        </StackPanel>
+
+                        <!-- Ship-to Countries & Pricing Info -->
+                        <Grid Name="shippingHeader"
+                              Margin="0,15,0,0" 
+                              HorizontalAlignment="Stretch"
+                              Height="auto">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="50*"/>
+                                <ColumnDefinition Width="50*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Ship to"
+                                       Foreground="Black" FontWeight="Bold"
+                                       HorizontalAlignment="Left"
+                                       Grid.Column="0"/>
+                            <TextBlock Text="Cost"
+                                       Foreground="Black" FontWeight="Bold"
+                                       HorizontalAlignment="Center"
+                                       Grid.Column="1"/>
+                            <TextBlock Text="With Another Item"
+                                       TextWrapping="WrapWholeWords"
+                                       Foreground="Black" FontWeight="Bold"
+                                       HorizontalAlignment="Right"
+                                       Grid.Column="2"/>
+                        </Grid>
+
+                        <ListView Name="shippingListView"
+                                  ItemsSource="{Binding shippingList}"
+                                  SelectionMode="None"
+                                  HorizontalAlignment="Stretch"
+                                  Height="auto">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid HorizontalAlignment="Stretch"
+                                          Margin="0,0,-50,-20">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="50*"/>
+                                            <ColumnDefinition Width="50*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0" 
+                                                BorderThickness="0" 
+                                                Margin="-10,0,0,0"
+                                                IsTapEnabled="False" IsDoubleTapEnabled="False" IsHitTestVisible="False"
+                                                HorizontalAlignment="Stretch" 
+                                                HorizontalContentAlignment="Stretch"
+                                                VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding destination_country_name}"
+                                                       Foreground="DarkSlateGray"
+                                                       HorizontalAlignment="Stretch"
+                                                       FontSize="16" FontWeight="Light"
+                                                       Grid.Column="0" FontFamily="Global User Interface"/>
+                                        </Button>
+                                            
+                                        <Button Grid.Column="1" 
+                                                BorderThickness="0"
+                                                IsTapEnabled="False" IsDoubleTapEnabled="False" IsHitTestVisible="False"
+                                                HorizontalAlignment="Stretch" 
+                                                HorizontalContentAlignment="Center"
+                                                VerticalAlignment="Center">
+                                            <TextBlock  
+                                                       Margin="0,0,0,0"
+                                                       HorizontalAlignment="Center"
+                                                       Foreground="DarkSlateGray" FontWeight="Light"
+                                                       FontSize="16"   
+                                                       Grid.Column="1">
+                                                <Run Text="$"/>
+                                                <Run Text="{Binding primary_cost}"/>
+                                            </TextBlock>
+                                        </Button>
+                                        
+                                        <Button Grid.Column="2" 
+                                                BorderThickness="0" 
+                                                IsTapEnabled="False" IsDoubleTapEnabled="False" IsHitTestVisible="False"
+                                                HorizontalAlignment="Stretch" 
+                                                HorizontalContentAlignment="Center"
+                                                VerticalAlignment="Center">
+                                            <TextBlock 
+                                                       HorizontalAlignment="Center"
+                                                TextAlignment="Right"
+                                                       Foreground="DarkSlateGray"
+                                                       FontSize="16" FontWeight="Light"
+                                                       Grid.Column="2" >
+                                                <Run Text="$"/>
+                                                <Run Text="{Binding secondary_cost}" />
+                                            </TextBlock>
+                                        </Button>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackPanel>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Advertise -->
+            <HubSection Name="adSection">
+                <DataTemplate>
+                    <!--<WindowsPhone81:AdMediatorControl Name="adControl"
+                                  Width="300"
+                                  Height="600"
+                                  Margin="0,-50,0,0"/>-->
+                    <UI:AdControl   Name="adControl"
+                                    HorizontalAlignment="Center"
+                                    IsEnabled="True"
+                                    ApplicationId="28a47aa7-4211-44f8-94fb-2a242754ddd4"
+                                    AdUnitId="203998"
+                                    Height="80"
+                                    Width="480"/>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Ratings -->
+            <HubSection Name="ratingsSection"
+                        Margin="0,0,40,0"
+                        Width="auto"
+                        BorderBrush="#FFBDB2B2">
+                <DataTemplate>
+                    <!-- Ratings Panel -->
+                    <Grid Name="ratingsPanel"
+                                Margin="0,-35,0,0"
+                                HorizontalAlignment="Stretch">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Reviews"
+                                   Grid.Row="0"
+                                   Height="50"
+                                   FontSize="20" FontWeight="Bold"
+                                   TextWrapping="WrapWholeWords"
+                                   TextAlignment="Left"
+                                   Foreground="#FF292828" FontFamily="Global User Interface"/>
+
+                        <ListView Name="ratingsListView"
+                                  Grid.Row="1"
+                                  CanDragItems="False"
+                                  IsHoldingEnabled="False"
+                                  CanReorderItems="False"
+                                  ScrollViewer.VerticalScrollMode="Enabled"
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                  ScrollViewer.HorizontalScrollMode="Disabled"
+                                  ItemsSource="{Binding userReviews}"
+                                  SelectionMode="Single">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Rectangle  Margin="0,10,0,0"
+                                                    Fill="Black"
+                                                    Height="1"
+                                                    Opacity="0.5"
+                                                    HorizontalAlignment="Stretch"
+                                                   />
+                                        <!-- Custom control defined in UserReview.xaml -->
+                                        <myUserControl:UserReview 
+                                            FontFamily="Global User Interface" Width="350"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <Button Name="ratingsButton"
+                                Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                Click="ratingsButton_Click"
+                                Background="#FFEAEAEA"
+                                BorderBrush="White"
+                                BorderThickness="1">
+                            <TextBlock 
+                                Text="more reviews"
+                                FontSize="20"
+                                FontFamily="Global User Interface" FontWeight="SemiLight"
+                                Foreground="Red"
+                                />
+                        </Button>
+
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <!-- Other items by the Shop & link to the shop page -->
+            <HubSection Name="shopSection"
+                        Margin="0,-0,40,-50"
+                        Width="auto" BorderBrush="#FFBDB2B2">
+                <DataTemplate>
+                    <Grid
+                        Margin="0,-35,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="90*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+
+                        </Grid.ColumnDefinitions>
+
+                        <!-- MADE BY - shop title -->
+                        <TextBlock Name="madeByBlock"
+                                   FontWeight="Bold"
+                                   DataContext="{Binding shopInfo}"
+                                   Height="auto"
+                                   FontSize="20" 
+                                   TextWrapping="WrapWholeWords"
+                                   TextAlignment="Left"
+                                   Foreground="#FF292828" FontFamily="Global User Interface">
+                            <Run Text="Made By " />
+                            <Run Text="{Binding shop_name}" />
+                        </TextBlock>
+
+                        <!-- Related Items -->
+                        <ListView Name="relatedItemsList"
+                                  Grid.Row="2"
+                                  CanDragItems="False"
+                                  IsHoldingEnabled="False"
+                                  CanReorderItems="False"
+                                  ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                                  ScrollViewer.VerticalScrollMode="Disabled"
+                                  SelectionMode="Single"
+                                  SelectionChanged="relatedItemsList_SelectionChanged"
+                                  Loaded="relatedItemsList_Loaded">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapGrid Name="wGrid" MaximumRowsOrColumns="2" Orientation="Horizontal"
+                                              ItemWidth="220"
+                                              ItemHeight="100"
+                                              ScrollViewer.VerticalScrollMode="Disabled"
+                                              HorizontalAlignment="Center">
+                                    </WrapGrid>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Image 
+                                            Height="140"
+                                            Stretch="UniformToFill"
+                                            Source="{Binding image_of_choice_url}"/>
+                                        <Grid Height="50">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="60*"/>
+                                                <ColumnDefinition Width="10*"/>
+                                                <ColumnDefinition Width="30*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Name="rItemName"
+                                                       Margin="2,0,0,0"
+                                                       Text="{Binding title}"
+                                                       Grid.Column="0"/>
+                                            <TextBlock Text="..." 
+                                                       Grid.Column="1"/>
+                                            <TextBlock Name="rPrice" 
+                                                       Grid.Column="2"
+                                                       Foreground="Green">
+                                                <Run Text="$"/>
+                                                <Run Text="{Binding price}"/>
+                                            </TextBlock>
+                                        </Grid>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <!-- Link to shop page -->
+                        <Button Name="shopPageLink"
+                                Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                Click="shopPageLink_Click"
+                                BorderBrush="White"
+                                BorderThickness="1" Background="#FFEAEAEA">
+                            <TextBlock 
+                                DataContext="{Binding shopInfo}"
+                                FontSize="20"
+                                FontFamily="Global User Interface" FontWeight="SemiLight"
+                                Foreground="Red">
+                                <Run Text="Visit Shop"/>
+                            </TextBlock>
+                        </Button>
+
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+        </Hub>
+
+    </Grid>
+</Page>
