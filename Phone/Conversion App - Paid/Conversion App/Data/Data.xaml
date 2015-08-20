@@ -1,0 +1,108 @@
+﻿<vm:ConversionModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:Conversion_App.ViewModels">
+    
+    
+    <vm:ConversionModel.length>
+        <vm:ConversionGroup Title="length">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="inches" />
+                <vm:ConversionData Title="feet" />
+                <vm:ConversionData Title="yards" />
+                <vm:ConversionData Title="miles" />
+                <vm:ConversionData Title="millimeters" />
+                <vm:ConversionData Title="centimeters" />
+                <vm:ConversionData Title="meters" />
+                <vm:ConversionData Title="kilometers" />
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.length>
+    
+    <vm:ConversionModel.weight>
+        <vm:ConversionGroup Title="weight">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="ounces" />
+                <vm:ConversionData Title="pounds" />
+                <vm:ConversionData Title="tons (US)" />
+                <vm:ConversionData Title="tons (UK)" />
+                <vm:ConversionData Title="metric tons" />
+                <vm:ConversionData Title="grams" />
+                <vm:ConversionData Title="kilograms" />
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.weight>
+    
+    <vm:ConversionModel.volume>
+        <vm:ConversionGroup Title="volume">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="liquid ounces" />
+                <vm:ConversionData Title="pints (US)" />
+                <vm:ConversionData Title="cubic inches" />
+                <vm:ConversionData Title="cubic feet" />
+                <vm:ConversionData Title="cups (US)" />
+                <vm:ConversionData Title="metric cups" />
+                <vm:ConversionData Title="gallons (US)" />
+                <vm:ConversionData Title="milliliters" />
+                <vm:ConversionData Title="centiliters" />
+                <vm:ConversionData Title="liters" />
+                <vm:ConversionData Title="barrels" />
+
+
+
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.volume>
+
+    <vm:ConversionModel.data>
+        <vm:ConversionGroup Title="data">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="bit" />
+                <vm:ConversionData Title="byte" />
+                <vm:ConversionData Title="kilobyte" />
+                <vm:ConversionData Title="megabyte" />
+                <vm:ConversionData Title="gigabyte" />
+                <vm:ConversionData Title="terabyte" />
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.data>
+
+    <vm:ConversionModel.temperature>
+        <vm:ConversionGroup Title="temperature">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="kelvin" />
+                <vm:ConversionData Title="celsius" />
+                <vm:ConversionData Title="fahrenheit" />
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.temperature>
+
+    <vm:ConversionModel.cooking>
+        <vm:ConversionGroup Title="cooking">
+            <vm:ConversionGroup.Items>
+                <vm:ConversionData Title="milliliters" />
+                <vm:ConversionData Title="metric cups" />
+                <vm:ConversionData Title="liters" />
+                <vm:ConversionData Title="teaspoons (US)" />
+                <vm:ConversionData Title="tablespoons (US)" />
+                <vm:ConversionData Title="cups (US)" />
+                <vm:ConversionData Title="pints (US)" />
+                <vm:ConversionData Title="quarts (US)" />
+                <vm:ConversionData Title="gallons (US)" />
+                <vm:ConversionData Title="teaspoons (UK)" />
+                <vm:ConversionData Title="tablespoons (UK)" />
+                <vm:ConversionData Title="cups (UK)" />
+                <vm:ConversionData Title="gallons (UK)" />
+            </vm:ConversionGroup.Items>
+        </vm:ConversionGroup>
+    </vm:ConversionModel.cooking>
+
+
+
+
+
+
+
+
+
+</vm:ConversionModel>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ITCHYBANDIT</Machine>
+    <WindowsUser>Owner</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>8f95b61f-4425-41b6-9c1e-24b5856f88b2</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>5B298CAC4877F9ED4F3679DF0046768DFA3E52B759766768B33E7A17E17E92E6</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>8f95b61f-4425-41b6-9c1e-24b5856f88b2_1.0.0.0_neutral__ckpvgz13cfhxc</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>8f95b61f-4425-41b6-9c1e-24b5856f88b2_ckpvgz13cfhxc!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>8f95b61f-4425-41b6-9c1e-24b5856f88b2</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Owner</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-11-20T21:20:48.922</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Store.exe">
+      <PackagePath>ASCII Converter.Store.exe</PackagePath>
+      <Modified>2014-11-20T21:20:48.465</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Shared\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Shared\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Shared\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Shared\DataModel\SampleData.json">
+      <PackagePath>DataModel\SampleData.json</PackagePath>
+      <Modified>2014-11-20T14:09:32.175</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-11-20T21:20:48.065</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\HubPage.xbf">
+      <PackagePath>HubPage.xbf</PackagePath>
+      <Modified>2014-11-20T21:20:48.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\SectionPage.xbf">
+      <PackagePath>SectionPage.xbf</PackagePath>
+      <Modified>2014-11-20T21:20:48.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ItemPage.xbf">
+      <PackagePath>ItemPage.xbf</PackagePath>
+      <Modified>2014-11-20T21:20:48.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Store.xr.xml">
+      <PackagePath>ASCII Converter.Store.xr.xml</PackagePath>
+      <Modified>2014-11-20T20:15:40.154</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-11-20T21:20:48.682</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

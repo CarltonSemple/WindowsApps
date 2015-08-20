@@ -1,0 +1,389 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Delivery_com.ManageLocations"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Delivery_com"
+    xmlns:common="using:Delivery_com.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- Collection of items displayed by this page -->
+        <CollectionViewSource
+        x:Name="itemsViewSource"
+        Source="{Binding Items}"/>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="Thistle" Opacity="1">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250" />  <!-- contains the buttons on the bottom right. 20 less than their combined height due to the button margins-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="primaryColumn" Width="30*"/>
+            <ColumnDefinition x:Name="secondaryColumn" Width="38*"/>
+            <ColumnDefinition x:Name="divider" Width="10" />         
+            <ColumnDefinition x:Name="rightSide" Width="30*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid x:Name="titlePanel" Background="IndianRed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton"  Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Center" HorizontalAlignment="Center"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"
+                        Foreground="Black"
+                        BorderBrush="Black"
+                        Background="Black" FontFamily="Global User Interface"/>
+            <TextBlock x:Name="pageTitle" Text="my locations" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Center" HorizontalAlignment="Left"
+                       Foreground="Black" FontFamily="Global User Interface"/>
+            
+            <!--border line-->
+            <Rectangle Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" 
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   Height="5" Stroke="MintCream" 
+                   Fill="MintCream"/>
+        </Grid>
+        
+        <!--border line-->
+        <Rectangle Grid.Column="0" Grid.RowSpan="3"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Stretch"
+                   Width="5" Stroke="MintCream" 
+                   Fill="MintCream"/>
+
+        <!-- Menu Options - lower right corner -->
+        <StackPanel Grid.Row="2" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="IndianRed">
+            <Button x:ConnectionId='3' x:Name="CreateLocationButton" 
+                    Height="90" HorizontalAlignment="Stretch"  
+                                                        Margin="0,0,-3,-10"  
+                    Background="IndianRed" BorderThickness="0,0,0,2">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="New Address" Foreground="Black" FontSize="36" FontFamily="Global User Interface"/>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button x:ConnectionId='4' x:Name="UpdateOption" 
+                       Margin="0,0,-3,-10"
+                       Height="90" HorizontalAlignment="Stretch" 
+                                               
+                       Background="IndianRed" BorderThickness="0,2,0,2">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Update Address" Foreground="Black" FontSize="36" FontFamily="Global User Interface"/>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+
+            <Button x:Name="DeleteOption" 
+                       Margin="0,0,-3,0"
+                       Height="90" HorizontalAlignment="Stretch" 
+                       Background="IndianRed" BorderThickness="0,2,0,0" FontFamily="Global User Interface" >
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="Delete Address" Foreground="Black" FontSize="36" FontFamily="Global User Interface"/>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </StackPanel>
+        
+        <!-- line that divides the section vertically -->
+        <Rectangle x:Name="dividingline" Grid.Column="3" Grid.Row="0" Grid.RowSpan="3"
+                   HorizontalAlignment="Left"
+                   Width="5" Stroke="MintCream" 
+                   Fill="MintCream"/>
+        
+        <!-- lines that go along the top&bottom of the bottom-right corner -->
+        <Rectangle Grid.Column="3" Grid.Row="3" 
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Height="5" Stroke="MintCream" 
+                   Fill="MintCream"/>
+        <Rectangle Grid.Column="3" Grid.Row="3" 
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Bottom"
+                   Height="5" Stroke="MintCream" 
+                   Fill="MintCream"/>
+        
+        <!-- not used anymore. contained the menu items -->
+        <ListView x:ConnectionId='1'
+            x:Name="itemListView"
+            AutomationProperties.AutomationId="ItemsListView"
+            AutomationProperties.Name="Items"
+            TabIndex="1"
+            
+            Height="100"
+            VerticalAlignment="Top"
+            
+            Visibility="Collapsed"
+            
+            Grid.Row="1" 
+            Margin="-10,-10,0,0"
+            Padding="120,0,0,60"
+            IsSwipeEnabled="False"
+                                                            >
+        	<ListView.Resources>
+        		<Style x:Key="ListViewItemStyle1" TargetType="ListViewItem">
+        			<Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+        			<Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+        			<Setter Property="Background" Value="Transparent"/>
+        			<Setter Property="TabNavigation" Value="Local"/>
+        			<Setter Property="IsHoldingEnabled" Value="True"/>
+        			<Setter Property="Margin" Value="0,0,18,2"/>
+        			<Setter Property="HorizontalContentAlignment" Value="Left"/>
+        			<Setter Property="VerticalContentAlignment" Value="Top"/>
+        			<Setter Property="Template">
+        				<Setter.Value>
+        					<ControlTemplate TargetType="ListViewItem">
+        						<ListViewItemPresenter x:Name="listViewItemPresenter" CheckHintBrush="{ThemeResource ListViewItemCheckHintThemeBrush}" CheckBrush="{ThemeResource ListViewItemCheckThemeBrush}" ContentMargin="4" ContentTransitions="{TemplateBinding ContentTransitions}" CheckSelectingBrush="{ThemeResource ListViewItemCheckSelectingThemeBrush}" DragForeground="{ThemeResource ListViewItemDragForegroundThemeBrush}" DragOpacity="{ThemeResource ListViewItemDragThemeOpacity}" DragBackground="{ThemeResource ListViewItemDragBackgroundThemeBrush}" DisabledOpacity="{ThemeResource ListViewItemDisabledThemeOpacity}" FocusBorderBrush="{ThemeResource ListViewItemFocusBorderThemeBrush}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" Padding="{TemplateBinding Padding}" PointerOverBackgroundMargin="1" PlaceholderBackground="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" PointerOverBackground="{ThemeResource ListViewItemPointerOverBackgroundThemeBrush}" ReorderHintOffset="{ThemeResource ListViewItemReorderHintThemeOffset}" SelectedPointerOverBorderBrush="{ThemeResource ListViewItemSelectedPointerOverBorderThemeBrush}" SelectionCheckMarkVisualEnabled="True" SelectedForeground="{ThemeResource ListViewItemSelectedForegroundThemeBrush}" SelectedPointerOverBackground="{ThemeResource ListViewItemSelectedPointerOverBackgroundThemeBrush}" SelectedBorderThickness="{ThemeResource ListViewItemCompactSelectedBorderThemeThickness}" SelectedBackground="{ThemeResource ListViewItemSelectedBackgroundThemeBrush}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}">
+        							<VisualStateManager.VisualStateGroups>
+        								<VisualStateGroup x:Name="SelectionStates">
+        									<VisualState x:Name="UnselectedSwiping"/>
+        									<VisualState x:Name="UnselectedPointerOver"/>
+        									<VisualState x:Name="Selecting"/>
+        									<VisualState x:Name="Selected">
+        										<Storyboard>
+        											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ListViewItemPresenter.CheckBrush)" Storyboard.TargetName="listViewItemPresenter">
+        												<DiscreteObjectKeyFrame KeyTime="0">
+        													<DiscreteObjectKeyFrame.Value>
+        														<SolidColorBrush Color="#FF2BFF0A"/>
+        													</DiscreteObjectKeyFrame.Value>
+        												</DiscreteObjectKeyFrame>
+        											</ObjectAnimationUsingKeyFrames>
+        											<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="listViewItemPresenter" d:IsOptimized="True"/>
+        										</Storyboard>
+        									</VisualState>
+        									<VisualState x:Name="SelectedSwiping"/>
+        									<VisualState x:Name="Unselecting"/>
+        									<VisualState x:Name="Unselected"/>
+        									<VisualState x:Name="SelectedUnfocused"/>
+        								</VisualStateGroup>
+        							</VisualStateManager.VisualStateGroups>
+        						</ListViewItemPresenter>
+        					</ControlTemplate>
+        				</Setter.Value>
+        			</Setter>
+        		</Style>
+        	</ListView.Resources>
+        	<ListView.ItemContainerStyle>
+        		<StaticResource ResourceKey="ListViewItemStyle1"/>
+        	</ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+                            <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                        </Border>
+                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+                            <TextBlock Text="{Binding}" 
+                                       Style="{StaticResource TitleTextBlockStyle}" 
+                                       TextWrapping="NoWrap" 
+                                       MaxHeight="40"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--<ListView.ItemContainerStyle>
+                <Style TargetType="FrameworkElement">
+                    <Setter Property="Margin" Value="0,0,0,10"/>
+                </Style>
+            </ListView.ItemContainerStyle>-->
+        </ListView>
+
+
+        <!-- address list -->
+        <ScrollViewer
+            x:Name="itemDetail"
+            AutomationProperties.AutomationId="ItemDetailScrollViewer"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            HorizontalAlignment="Stretch"
+            Margin="10,0,0,0"
+
+            DataContext="{Binding SelectedItem, ElementName=itemListView}"
+            HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Enabled"
+            ScrollViewer.ZoomMode="Disabled">
+
+            <Grid x:Name="itemDetailGrid" Margin="0,5,0,5" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Image Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>-->
+                <ListView x:ConnectionId='2' x:Name="addressList" 
+                          Margin="0,0,0,0" 
+                          HorizontalAlignment="Stretch"
+                                                                                
+                                                             SelectionMode="Single" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Display the addresses -->
+                            <StackPanel>
+                            <TextBlock 
+                                Margin="0,0,100,0"
+                                HorizontalAlignment="Stretch"
+                                Text="{Binding street}" 
+                                               FontFamily="Nirmala UI Semilight" 
+                                               FontSize="32" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <!--<StackPanel x:Name="itemDetailTitlePanel" Grid.Row="1" Grid.Column="1">
+                    <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                    <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                </StackPanel>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextBlockStyle}"/>-->
+            </Grid>
+        </ScrollViewer>
+        
+        <!-- address details -->
+        <StackPanel
+            Grid.Column="1" Grid.Row="0" Grid.RowSpan="3">
+            <TextBlock x:Name="sectionTitle" 
+                       Height="50" HorizontalAlignment="Center" VerticalAlignment="Center"
+                       Margin="0,90,0,0" 
+                       Foreground="Black"
+                       Text="Details" FontSize="40" />
+            <Grid x:Name="addressDetailsGrid"
+                Margin="0,60,0,0"
+                HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <!--<Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50" />
+                </Grid.ColumnDefinitions>-->
+                <TextBlock DataContext="{Binding Location}"
+                    Margin="0,0,0,0"
+                    Grid.Row="0"
+                    Height="50"
+                    HorizontalAlignment="Stretch"
+                    Foreground="IndianRed"
+                    Text="{Binding street}" FontSize="40"/>
+                <TextBlock DataContext="{Binding Location}"
+                           Grid.Row="1"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,0">
+                    <Run Text="{Binding city}"
+                         Foreground="IndianRed"
+                         FontSize="30" />
+                    <Run Text=", " 
+                         Foreground="IndianRed"
+                         FontSize="30" />
+                    <Run Text="{Binding state}" 
+                         Foreground="IndianRed"
+                         FontSize="30"/>
+                    <Run Text="  " 
+                         Foreground="IndianRed"
+                         FontSize="30" />
+                    <Run Text="{Binding zip_code}" 
+                         Foreground="IndianRed"
+                         FontSize="30" /> 
+                </TextBlock>
+            </Grid>
+            <TextBlock x:Name="phoneNumBlock"
+                       DataContext="{Binding Location}"
+                       Margin="0,15,0,0"
+                       Grid.Row="2"
+                       Height="50" HorizontalAlignment="Stretch">
+                <Run Text="phone: " FontSize="26" Foreground="IndianRed" />
+                <Run Text="{Binding phone}" FontSize="26" Foreground="IndianRed" />
+            </TextBlock>
+        </StackPanel>
+
+        <VisualStateManager.VisualStateGroups>
+
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ViewStates">
+                <VisualState x:Name="PrimaryView" />
+                <VisualState x:Name="SinglePane">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="primaryColumn" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="*"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="secondaryColumn" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,60"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <!--
+                    When an item is selected and only one pane is shown the details display requires more extensive changes:
+                     * Hide the master list and the column it was in
+                     * Move item details down a row to make room for the title
+                     * Move the title directly above the details
+                     * Adjust padding for details
+                 -->
+                <VisualState x:Name="SinglePane_Detail">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="primaryColumn" Storyboard.TargetProperty="Width">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="(Grid.Row)">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="(Grid.RowSpan)">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="titlePanel" Storyboard.TargetProperty="(Grid.Column)">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetailGrid" Storyboard.TargetProperty="Margin">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,60"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemDetail" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,0"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</Page>
+

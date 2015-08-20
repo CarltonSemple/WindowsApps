@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="NewTask.TaskUserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="500" d:DesignWidth="480">
+
+    <Grid Background="{StaticResource PhoneChromeBrush}" HorizontalAlignment="Stretch" Width="auto" Visibility="Visible" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Button 
+                                x:Name="deleteButton"
+                                
+                                BorderThickness="0" Background="{StaticResource PhoneAccentBrush}" Margin="-11,-12,0,-13">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="12" Text=">" />
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <ScrollViewer   
+                                Grid.Column="1"
+                                Grid.ColumnSpan="4"
+                                      Height="50"
+                                      VerticalAlignment="Top"
+                                      VerticalScrollBarVisibility="Disabled"
+                                      HorizontalAlignment="Stretch"
+                                      HorizontalScrollBarVisibility="Visible"
+                                Canvas.Top="60"
+                                Canvas.Left="340">
+            <TextBlock 
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="4"
+                                    MinWidth="100"
+                                    HorizontalAlignment="Stretch"
+                                    VerticalAlignment="Top" FontSize="34">
+                                    <!--<Run Text="     "/>-->
+                                    <Run Text="{Binding Details}"/>
+                                    <Run Text="     "/>
+            </TextBlock>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

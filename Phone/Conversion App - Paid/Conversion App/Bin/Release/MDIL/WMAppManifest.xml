@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <Languages xmlns="">
+    <Language code="en" />
+    <Language code="en-AU" />
+    <Language code="en-CA" />
+    <Language code="en-BZ" />
+    <Language code="en-029" />
+    <Language code="en-IN" />
+    <Language code="en-IE" />
+    <Language code="en-JM" />
+    <Language code="en-MY" />
+    <Language code="en-NZ" />
+    <Language code="en-PH" />
+    <Language code="en-SG" />
+    <Language code="en-ZA" />
+    <Language code="en-TT" />
+    <Language code="en-GB" />
+    <Language code="en-US" />
+    <Language code="en-ZW" />
+  </Languages>
+  <App xmlns="" ProductID="{a4cf3e81-cff8-4fe1-b1b8-2823911500cb}" Title="Converge Free" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="iTchyBandit" Description="Containing over 400 calculations, check out this beautifully designed Conversion app! If you have any requested conversions, please email.&#xD;&#xA;" Publisher="iTchyBandit" PublisherID="{9bd89fc1-d39d-4621-9149-80f7b399c945}">
+    <IconPath IsRelative="true" IsResource="false">Assets\Tiles\ConvergeIcon1-75.png</IconPath>
+    <Capabilities></Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="Conversion_AppToken" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">ConvergeIcon1-75.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">ConvergeIcon1-159.png</BackgroundImageURI>
+          <Title>Converge Free</Title>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">ConvergeIcon1.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
+          <DeviceLockImageURI></DeviceLockImageURI>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+  </App>
+</Deployment>
+<!-- WPSDK Version 8.0.9900 -->

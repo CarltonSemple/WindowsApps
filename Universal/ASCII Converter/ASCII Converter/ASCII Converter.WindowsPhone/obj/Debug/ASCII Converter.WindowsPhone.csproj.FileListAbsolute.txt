@@ -1,0 +1,61 @@
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\App.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\HubPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\ASCII Converter.WindowsPhone.xr.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\ASCII Converter.WindowsPhone.exe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\ASCII Converter.WindowsPhone.pdb
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\resources.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\AppxManifest.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\ASCII Converter.WindowsPhone.build.appxrecipe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\App.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\App.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\HubPage.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\HubPage.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\App.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\HubPage.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\App.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\HubPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\ASCII Converter.WindowsPhone.exe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\ASCII Converter.WindowsPhone.pdb
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\priconfig.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\priconfig.xml.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\layout.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\layout.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\resources.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\resources.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\pri.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\pri.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\qualifiers.txt
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.AdMediator.Core.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.AdMediator.WindowsPhone81.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\AdDuplex.Universal.Controls.WinPhone.XAML.winmd
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\AdDuplex.Universal.WinPhone.WinRT.winmd
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.AdMediator.WindowsPhone81.AdDuplex.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.AdMediator.WindowsPhone81.Smaato.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Common.winmd
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Display.winmd
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.UI.winmd
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\SOMAWP81.dll
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\AdDuplex.Universal.Controls.WinPhone.XAML.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\AdDuplex.Universal.WinPhone.WinRT.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Common.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Common.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Display.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.Display.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.UI.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\Microsoft.Advertising.Mobile.UI.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\SOMAWP81.pdb
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Debug\SOMAWP81.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\ASCII Converter.WindowsPhone.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\ASCII Converter.WindowsPhone.csproj.GenerateResource.Cache
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\AdDuplex.Universal.Controls.WinPhone.XAML.pri.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\AdDuplex.Universal.WinPhone.WinRT.pri.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\Microsoft.Advertising.Mobile.Common.pri.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\Microsoft.Advertising.Mobile.Display.pri.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\Microsoft.Advertising.Mobile.UI.pri.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Debug\SOMAWP81.pri.xml

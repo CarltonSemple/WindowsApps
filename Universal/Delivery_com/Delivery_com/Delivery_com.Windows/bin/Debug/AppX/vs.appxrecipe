@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>ITCHYBANDIT</Machine>
+    <WindowsUser>Owner</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>712b9a32-6880-450a-b270-f57e9872e0b1</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>6B2CCBC4A7CC27F4C77A736D857F9BCBB5F2FD22616A971567C1AC31053F5A9A</RegisteredManifestChecksum>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-10-27T14:34:14.963</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\Delivery_com.Store.exe">
+      <PackagePath>Delivery_com.Store.exe</PackagePath>
+      <Modified>2014-10-27T14:34:14.771</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\packages\Microsoft.Net.Http.2.2.19\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-04-06T04:32:19.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\packages\Microsoft.Net.Http.2.2.19\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-04-06T04:32:19.875</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Shared\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Shared\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Shared\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2014-03-14T14:54:50.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Shared\DataModel\SampleData.json">
+      <PackagePath>DataModel\SampleData.json</PackagePath>
+      <Modified>2014-04-06T03:35:48.662</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-05-11T01:54:17.652</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\CreateEditLocationPage.xbf">
+      <PackagePath>CreateEditLocationPage.xbf</PackagePath>
+      <Modified>2014-05-11T06:40:51.779</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\HubPage.xbf">
+      <PackagePath>HubPage.xbf</PackagePath>
+      <Modified>2014-05-11T06:40:51.784</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\LoginPage.xbf">
+      <PackagePath>LoginPage.xbf</PackagePath>
+      <Modified>2014-05-11T01:54:17.659</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\ManageLocations.xbf">
+      <PackagePath>ManageLocations.xbf</PackagePath>
+      <Modified>2014-05-11T06:40:51.789</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\SectionPage.xbf">
+      <PackagePath>SectionPage.xbf</PackagePath>
+      <Modified>2014-05-11T01:54:17.665</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\ItemPage.xbf">
+      <PackagePath>ItemPage.xbf</PackagePath>
+      <Modified>2014-05-11T01:54:17.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\Delivery_com.Store.xr.xml">
+      <PackagePath>Delivery_com.Store.xr.xml</PackagePath>
+      <Modified>2014-05-11T06:40:51.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Owner\Documents\Unified Windows\Delivery_com\Delivery_com\Delivery_com.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-10-27T14:34:14.875</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

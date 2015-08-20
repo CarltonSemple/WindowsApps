@@ -1,0 +1,27 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Conversion App" EntryPointType="Conversion_App.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Conversion App" Source="Conversion App.dll" />
+    <AssemblyPart x:Name="Microsoft.Advertising.Mobile" Source="Microsoft.Advertising.Mobile.dll" />
+    <AssemblyPart x:Name="microsoft.advertising.mobile.ui" Source="microsoft.advertising.mobile.ui.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls" Source="Microsoft.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart Source="en-029/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-AU/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-BZ/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-CA/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-GB/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-IE/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-IN/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-JM/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-MY/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-NZ/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-PH/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-SG/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-TT/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-ZA/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-ZW/Conversion App.resources.dll" />
+    <AssemblyPart Source="en/Conversion App.resources.dll" />
+    <AssemblyPart Source="en-GB/Microsoft.Phone.Controls.Toolkit.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

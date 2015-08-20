@@ -1,0 +1,42 @@
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\App.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\HubPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\SectionPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ItemPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Store.xr.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Store.exe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Store.pdb
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\resources.pri
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\AppxManifest.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\bin\Debug\ASCII Converter.Windows.build.appxrecipe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\App.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\App.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\HubPage.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\HubPage.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\SectionPage.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\SectionPage.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ItemPage.g.i.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ItemPage.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\App.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\HubPage.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\SectionPage.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ItemPage.xaml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\App.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\HubPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\SectionPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ItemPage.xbf
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ASCII Converter.Store.exe
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ASCII Converter.Store.pdb
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\priconfig.xml
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\priconfig.xml.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\layout.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\layout.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\resources.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\resources.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\pri.resfiles
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\pri.resfiles.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\qualifiers.txt
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.Windows\obj\Debug\ProjectArchitectures.txt

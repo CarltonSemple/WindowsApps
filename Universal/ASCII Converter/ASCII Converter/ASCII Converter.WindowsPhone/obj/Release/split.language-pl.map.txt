@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-pl"
+"ResourceDimensions"		"language-pl-pl"
+
+[Files]
+"C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\obj\Release\split.language-pl.pri"			"resources.pri"

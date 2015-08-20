@@ -1,0 +1,30 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="NewTask" EntryPointType="NewTask.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="NewTask" Source="NewTask.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart Source="de-DE/NewTask.resources.dll" />
+    <AssemblyPart Source="de/NewTask.resources.dll" />
+    <AssemblyPart Source="es-EC/NewTask.resources.dll" />
+    <AssemblyPart Source="es-ES/NewTask.resources.dll" />
+    <AssemblyPart Source="es-MX/NewTask.resources.dll" />
+    <AssemblyPart Source="es-PR/NewTask.resources.dll" />
+    <AssemblyPart Source="es-US/NewTask.resources.dll" />
+    <AssemblyPart Source="es/NewTask.resources.dll" />
+    <AssemblyPart Source="fr-BE/NewTask.resources.dll" />
+    <AssemblyPart Source="fr-FR/NewTask.resources.dll" />
+    <AssemblyPart Source="fr/NewTask.resources.dll" />
+    <AssemblyPart Source="hi-IN/NewTask.resources.dll" />
+    <AssemblyPart Source="hi/NewTask.resources.dll" />
+    <AssemblyPart Source="it-CH/NewTask.resources.dll" />
+    <AssemblyPart Source="it-IT/NewTask.resources.dll" />
+    <AssemblyPart Source="it/NewTask.resources.dll" />
+    <AssemblyPart Source="pt-BR/NewTask.resources.dll" />
+    <AssemblyPart Source="ru/NewTask.resources.dll" />
+    <AssemblyPart Source="zh/NewTask.resources.dll" />
+    <AssemblyPart Source="de/System.Windows.Interactivity.resources.dll" />
+    <AssemblyPart Source="es/System.Windows.Interactivity.resources.dll" />
+    <AssemblyPart Source="fr/System.Windows.Interactivity.resources.dll" />
+    <AssemblyPart Source="it/System.Windows.Interactivity.resources.dll" />
+    <AssemblyPart Source="ru/System.Windows.Interactivity.resources.dll" />
+  </Deployment.Parts>
+</Deployment>

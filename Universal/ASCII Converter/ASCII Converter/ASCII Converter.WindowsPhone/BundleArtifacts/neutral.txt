@@ -1,0 +1,4 @@
+MainPackage=C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Release\ASCII Converter.WindowsPhone_1.1.2.5_Bundle\ASCII Converter.WindowsPhone_1.1.2.5_AnyCPU.appx
+SymbolPackage=C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\AppPackages\ASCII Converter.WindowsPhone_1.1.2.5_Test\ASCII Converter.WindowsPhone_1.1.2.5_AnyCPU.appxsym
+ResourcePack=C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Release\ASCII Converter.WindowsPhone_1.1.2.5_Bundle\ASCII Converter.WindowsPhone_1.1.2.5_scale-100.appx
+ResourcePack=C:\Users\Owner\Documents\Unified Windows\ASCII Converter\ASCII Converter\ASCII Converter.WindowsPhone\bin\Release\ASCII Converter.WindowsPhone_1.1.2.5_Bundle\ASCII Converter.WindowsPhone_1.1.2.5_scale-140.appx

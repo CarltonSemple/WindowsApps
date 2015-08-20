@@ -1,0 +1,542 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+    x:Class="Conversion_App.MainPage"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneAccentBrush}">
+
+        <Rectangle Fill="{StaticResource PhoneBackgroundBrush}" Height="830" Stroke="Black" VerticalAlignment="Top" Grid.RowSpan="5" Opacity="0.5"/>
+
+        <!--<UI:AdControl x:Name="advertisement" ApplicationId="bed53f70-e57a-40ce-90f7-a39cd10b59c4" AdUnitId="147233" HorizontalAlignment="Right" Height="80" Margin="0,0,0,0" VerticalAlignment="Top" Width="280"/>-->
+
+
+
+        <Button x:Name="testbaby" Opacity="0" Content="hi" Height="100" Margin="10,-500,0,0"/>
+
+        <phone:Panorama x:Name="myPanorama" SelectionChanged="PanoramaItemSelectionChanged"  >
+
+
+            <phone:PanoramaItem Width="445" x:Name="Converter" >
+                <Grid Margin="0,-33,-10,0">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="115" />
+
+                        <ColumnDefinition Width="115" />
+
+                        <ColumnDefinition Width="115" />
+
+                        <ColumnDefinition Width="115" />
+                        <ColumnDefinition Width="*" />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="65" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="65" />
+                        <RowDefinition Height="8" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                    </Grid.RowDefinitions>
+
+                    
+                    
+                    <!--<TextBlock Grid.Column="3" Grid.Row="4"  Margin="10,32,0,84"  Text="-&gt;" Grid.RowSpan="3"/>-->
+
+                    <TextBlock x:Name="ConverterHeader" Text="Converter" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+						FontSize="38" FontFamily="Moire Light" Foreground="{StaticResource PhoneContrastBackgroundBrush}"
+                               />
+
+                    <TextBlock x:Name="inputUnitBlock" Grid.Row="1" Grid.ColumnSpan="4"  />
+                    <TextBlock x:Name="outputUnitBlock" Grid.Row="3" Grid.ColumnSpan="4" />
+
+                    <TextBlock 
+						x:Name="userInput" Grid.Row="2" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="4"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" 
+						FontSize="40" Foreground="White"/>
+                    <TextBlock 
+						x:Name="resultBlock" Grid.Row="4" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="4"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" 
+						FontSize="40" Foreground="White"/>
+
+                    <Button  x:Name="ClearButton"
+						Click="ClearButton_Click"
+						Content="Clear" FontSize="60" FontFamily="Moire ExtraBold" Foreground="{StaticResource PhoneContrastBackgroundBrush}"
+						Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" BorderThickness="2" 
+						Margin="-8,0,0,0"  BorderBrush="{StaticResource PhoneAccentBrush}"/>
+
+                    <Button x:Name="DeleteButton" 
+                        Visibility="{StaticResource PhoneLightThemeVisibility}"
+						Click="DeleteButton_Click"
+						Grid.Column="2" Grid.Row="6" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneAccentBrush}"
+                        >
+                        <ContentControl>
+                            <Image Source="/Images/Delete dark.png" Visibility="{StaticResource PhoneLightThemeVisibility}"/>
+                        </ContentControl>
+                    </Button>
+                    <Button x:Name="DeleteButtonDarkTheme" 
+                        Visibility="{StaticResource PhoneDarkThemeVisibility}"
+						Click="DeleteButton_Click"
+						Grid.Column="2" Grid.Row="6" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneAccentBrush}"
+                        >
+                        <ContentControl>
+                            <Image Source="/Images/Delete light.png" Visibility="{StaticResource PhoneDarkThemeVisibility}"/>
+                        </ContentControl>
+                    </Button>
+
+
+                  
+
+
+                    <Button 
+						Grid.Column="1" Grid.Row="7" 
+                        
+						Content="Unit Selection"
+						FontFamily="Moire Light"
+						FontSize="60"
+						Click="ConversionTypeButton_Click"
+						BorderThickness="2" BorderBrush="{StaticResource PhoneAccentBrush}" 
+						RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="4" Margin="10,101.75,-176.25,101" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.RowSpan="3">
+                        <Button.RenderTransform>
+                            <CompositeTransform Rotation="90"/>
+                        </Button.RenderTransform>
+
+                    </Button>
+
+
+                    <Button x:Name="DecimalButton" 
+						Content="."
+						Click="Number_Click"
+						Grid.Column="2" Grid.Row="10" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}" />
+
+
+                    <Button x:Name="ZeroButton" 
+						Content="0"
+						Click="Number_Click"
+						Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" BorderThickness="2" FontFamily="Moire ExtraBold" 
+						FontSize="68" Foreground="{StaticResource PhoneBackgroundBrush}" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}" />
+
+
+                    <Button x:Name="OneButton" 
+						Content="1"
+						Click="Number_Click"
+						Grid.Column="0" Grid.Row="9" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"  />
+
+
+                    <Button x:Name="TwoButton" 
+						Content="2"
+						Click="Number_Click" Grid.Row="9" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Grid.Column="1"
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}" />
+
+
+                    <Button x:Name="ThreeButton" 
+						Content="3"
+						Click="Number_Click"
+						Grid.Column="2" Grid.Row="9" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}" />
+
+
+                    <Button x:Name="FourButton" 
+						Content="4"
+						Click="Number_Click"
+						Grid.Column="0" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"  />
+
+
+                    <Button x:Name="FiveButton" 
+						Content="5"
+						Click="Number_Click" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Grid.Column="1"
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"  />
+
+
+                    <Button x:Name="SixButton" 
+						Content="6"
+						Click="Number_Click"
+						Grid.Column="2" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"  />
+
+
+                    <Button x:Name="SevenButton" 
+						Content="7"
+						Click="Number_Click"
+						Grid.Column="0" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"  />
+
+
+                    <Button x:Name="EightButton" 
+						Content="8"
+						Click="Number_Click" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Grid.Column="1" Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}" />
+
+
+                    <Button x:Name="NineButton" 
+						Content="9"
+						Click="Number_Click"
+						Grid.Column="2" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Background="{StaticResource PhoneAccentBrush}" 
+						Margin="-8,0,0,0" BorderBrush="{StaticResource PhoneContrastBackgroundBrush}"
+                            />
+
+                </Grid>
+            </phone:PanoramaItem>
+
+
+            <phone:PanoramaItem Width="490" x:Name="Calculator">
+                <Grid Margin="0,-33,-10,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="99" />
+                        <ColumnDefinition Width="99" />
+                        <ColumnDefinition Width="99" />
+                        <ColumnDefinition Width="99" />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="8" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                        <RowDefinition Height="102" />
+                    </Grid.RowDefinitions>
+
+                    <!--get rid of the calculatorheader margin when the ad is not there-->
+                    
+                    <TextBlock x:Name="CalculatorHeader" Text="Calculate" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                               Margin="-15,0,0,0"
+						FontSize="38" FontFamily="Moire Light" Foreground="{StaticResource PhoneContrastBackgroundBrush}"
+                               />
+
+                    <TextBlock x:Name="equationBlock" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"  
+						FontSize="30" Foreground="White" 
+                               />
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4">
+                    <TextBlock x:Name="calculatorEqualsBlock1" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Stretch"
+                       FontSize="36"
+                               
+                        />
+
+                    <TextBlock 
+						x:Name="calculatorUserInput" 
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" 
+						FontSize="40" Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" >
+                        <TextBlock x:Name="calculatorEqualsBlock" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Text="="
+                       FontSize="36"
+                        />
+                    <TextBlock 
+						x:Name="calculatorResultBlock" 
+						HorizontalAlignment="Left"
+						VerticalAlignment="Center" 
+						FontSize="40" Foreground="White"/>
+                    
+                    </StackPanel>
+
+
+                    
+                    <Button
+						x:Name="CalculatorClearButton"
+						Click="CalculatorClearButton_Click"
+						Content="C"
+						FontFamily="Moire ExtraBold" FontSize="60" 
+						Grid.Column="1" Grid.Row="5" BorderThickness="2"  Margin="-5,0,-5,0"  BorderBrush="{StaticResource PhoneBackgroundBrush}">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+
+                    <Button
+						x:Name="CalculatorDeleteButton"
+                        Visibility="{StaticResource PhoneLightThemeVisibility}" 
+						Click="CalculatorDeleteButton_Click"
+						Grid.Column="2" Grid.Row="5" BorderThickness="2"  Margin="-5,0,-5,0"   BorderBrush="{StaticResource PhoneBackgroundBrush}">
+                        <ContentControl>
+                            <Image x:Name="deleteimage" Source="/Images/Delete dark.png" Visibility="{StaticResource PhoneLightThemeVisibility}" />
+                        </ContentControl>
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button
+						x:Name="CalculatorDeleteButtonDarkTheme"
+                        Visibility="{StaticResource PhoneDarkThemeVisibility}"
+						Click="CalculatorDeleteButton_Click"
+						Grid.Column="2" Grid.Row="5" BorderThickness="2"  Margin="-5,0,-5,0"   BorderBrush="{StaticResource PhoneBackgroundBrush}">
+                        <ContentControl>
+                            <Image x:Name="deleteimage2" Source="/Images/Delete light.png" Visibility="{StaticResource PhoneDarkThemeVisibility}" />
+                        </ContentControl>
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+                    <Button
+						x:Name="CalculatorNegateButton"
+						Click="CalculatorNegateButton_Click"
+                        Content="+-"
+                        FontSize="36" FontFamily="Moire ExtraBold"
+						Grid.Column="3" Grid.Row="5" BorderThickness="2"  Margin="-5,0,-5,0"   BorderBrush="{StaticResource PhoneBackgroundBrush}">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button
+						x:Name="EqualsButton"
+						Click="EqualsButton_click"
+						Content="="
+						Grid.Column="3" Grid.Row="9" BorderThickness="2"  Margin="89,0,10,0" Grid.ColumnSpan="2" BorderBrush="{StaticResource PhoneBackgroundBrush}" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="36" FontFamily="Moire ExtraBold">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button
+						x:Name="PlusButton"
+						Click="PlusButton_Click"
+						Content="+"
+						Grid.Column="3" Grid.Row="8" BorderThickness="2" Margin="89,0,0,0" Grid.ColumnSpan="2" BorderBrush="{StaticResource PhoneBackgroundBrush}" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="36" FontFamily="Moire ExtraBold" HorizontalAlignment="Left" Width="99">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button
+						x:Name="MinusButton"
+						Click="MinusButton_Click"
+						Content="-"
+						Grid.Column="3" Grid.Row="7" BorderThickness="2"  Margin="89,0,0,0" HorizontalAlignment="Left" Width="99" Grid.ColumnSpan="2" BorderBrush="{StaticResource PhoneBackgroundBrush}" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="36" FontFamily="Moire ExtraBold">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+
+                    <Button
+						x:Name="MultiplicationButton"
+						Click="MultiplicationButton_Click"
+						Content="*"
+						Grid.Column="3" Grid.Row="6" BorderThickness="2" Margin="89,0,10,0"  BorderBrush="{StaticResource PhoneBackgroundBrush}" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="36" FontFamily="Moire ExtraBold" Grid.ColumnSpan="2">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+                    <Button
+						x:Name="DivisionButton"
+						Click="DivisionButton_Click"
+						Content="/"
+						Grid.Column="3" Grid.Row="5" BorderThickness="2"  Margin="89,0,0,0" HorizontalAlignment="Left" Width="99" Grid.ColumnSpan="2" BorderBrush="{StaticResource PhoneBackgroundBrush}" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontSize="36" FontFamily="Moire ExtraBold">
+                        <Button.Background>
+                            <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                        </Button.Background>
+                    </Button>
+
+
+                    <Button x:Name="CalculatorDecimalButton" 
+                        Content="."
+                        Click="decimal_Click" Grid.Row="9" BorderThickness="2" 
+                            BorderBrush="{StaticResource PhoneAccentBrush}"
+                            Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68"
+                            Grid.Column="3"
+                            Margin="-5,0,-5,0"/>
+
+                    <Button x:Name="CalculatorZeroButton" 
+						Content="0"
+						Click="CalculatorNumber_Click"
+						Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="9" BorderThickness="2" FontFamily="Moire ExtraBold" FontSize="68" Foreground="{StaticResource PhoneContrastBackgroundBrush}" 
+						Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}" />
+
+
+                    <Button x:Name="CalculatorOneButton" 
+						Content="1"
+                        
+						Click="CalculatorNumber_Click"
+						Grid.Column="1" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"  />
+
+
+                    <Button x:Name="CalculatorTwoButton" 
+						Content="2"
+						Click="CalculatorNumber_Click" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.Column="2"
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}" />
+
+
+                    <Button x:Name="CalculatorThreeButton" 
+						Content="3"
+						Click="CalculatorNumber_Click"
+						Grid.Column="3" Grid.Row="8" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}" />
+
+
+                    <Button x:Name="CalculatorFourButton" 
+						Content="4"
+						Click="CalculatorNumber_Click"
+						Grid.Column="1" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"  />
+
+
+                    <Button x:Name="CalculatorFiveButton" 
+						Content="5"
+						Grid.Column="2"
+						Click="CalculatorNumber_Click" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"  />
+
+
+                    <Button x:Name="CalculatorSixButton" 
+						Content="6"
+						Click="CalculatorNumber_Click"
+						Grid.Column="3" Grid.Row="7" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"  />
+
+
+                    <Button x:Name="CalculatorSevenButton" 
+						Content="7"
+						Click="CalculatorNumber_Click"
+						Grid.Column="1" Grid.Row="6" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"  />
+
+
+                    <Button x:Name="CalculatorEightButton" 
+						Content="8"
+						Click="CalculatorNumber_Click" Grid.Row="6" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.Column="2"
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}" />
+
+
+                    <Button x:Name="CalculatorNineButton" 
+						Content="9"
+						Click="CalculatorNumber_Click"
+						Grid.Column="3" Grid.Row="6" BorderThickness="2" Foreground="{StaticResource PhoneContrastBackgroundBrush}" FontFamily="Moire ExtraBold" FontSize="68" 
+						Grid.ColumnSpan="1" Margin="-5,0,-5,0" BorderBrush="{StaticResource PhoneAccentBrush}"
+                            />
+
+                </Grid>
+            </phone:PanoramaItem>
+
+
+            <phone:PanoramaItem 
+                
+				Margin="0,0,0,0"
+				Header="Converge">
+                <Grid Margin="30,0,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+
+
+                    <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" >
+                        <Button Height="100" BorderThickness="0" Background="{StaticResource PhoneAccentBrush}"
+                                Content="Zip" FontSize="30" 
+                                Click="zip_click"
+                                />
+                        <Button Height="100" BorderThickness="0" Background="{StaticResource PhoneAccentBrush}"
+                                Content="Zip Pro" FontSize="30" 
+                                Click="zippro_click"
+                                />
+                        <!--<Button 
+                            Click="Button_Click"
+                            Content="About" 
+                            FontSize="30"                            
+                            Height="100" BorderThickness="0" Background="{StaticResource PhoneAccentBrush}" />-->
+                        <Button 
+                            x:Name="ReviewButton"
+                            Click="ReviewButton_Click"
+                            Content="Rate / Review" 
+                            FontSize="30"                            
+                            Height="100" BorderThickness="0" Background="{StaticResource PhoneAccentBrush}" />
+
+
+                    </StackPanel>
+
+                    
+                </Grid>
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Uncomment to see an alignment grid to help ensure your controls are
+            aligned on common boundaries.  The image has a top margin of -32px to
+            account for the System Tray. Set this to 0 (or remove the margin altogether)
+            if the System Tray is hidden.
+
+            Before shipping remove this XAML and the image itself.-->
+        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+
+
+
+    </Grid>
+</phone:PhoneApplicationPage>

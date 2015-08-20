@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US" />
+  <Languages xmlns="">
+    <Language code="es" />
+    <Language code="ru" />
+    <Language code="zh" />
+    <Language code="hi" />
+    <Language code="hi-IN" />
+    <Language code="es-ES" />
+    <Language code="es-US" />
+    <Language code="de" />
+    <Language code="de-DE" />
+    <Language code="es-EC" />
+    <Language code="es-MX" />
+    <Language code="es-PR" />
+    <Language code="fr" />
+    <Language code="fr-BE" />
+    <Language code="fr-FR" />
+    <Language code="it" />
+    <Language code="it-IT" />
+    <Language code="it-CH" />
+    <Language code="pt-BR" />
+  </Languages>
+  <App xmlns="" ProductID="{bf6af466-13ec-499e-8f32-a979eba6df74}" Title="myTask" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="iTchyBandit" Description="A beautifully designed task app with a moving UI.&#xD;&#xA;&#xD;&#xA;myTask is a task application that has a simple, elegant design.  &#xD;&#xA;It has a live tile for the start screen so that you can see the oldest tasks that you need to finish first.  &#xD;&#xA;You can swipe the text to" Publisher="iTchyBandit" PublisherID="{cdba2bd5-25f0-4060-8c2c-b98edb9013da}">
+    <IconPath IsRelative="true" IsResource="false">75-2.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_MEDIALIB_AUDIO" />
+      <Capability Name="ID_CAP_MEDIALIB_PLAYBACK" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="NewTaskToken" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\159-2.png</SmallImageURI>
+          <Count>0</Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\336-2.png</BackgroundImageURI>
+          <Title></Title>
+          <BackContent></BackContent>
+          <BackBackgroundImageURI IsRelative="true" IsResource="false"></BackBackgroundImageURI>
+          <BackTitle></BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\336-2.png</LargeBackgroundImageURI>
+          <LargeBackContent />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false"></LargeBackBackgroundImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false"></DeviceLockImageURI>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA" />
+      <ScreenResolution Name="ID_RESOLUTION_WXGA" />
+      <ScreenResolution Name="ID_RESOLUTION_HD720P" />
+    </ScreenResolutions>
+  </App>
+</Deployment>
+<!-- WPSDK Version 8.0.9900 -->

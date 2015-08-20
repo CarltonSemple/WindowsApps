@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fa5de53d-306b-485e-a6b0-174ab7cbb8e1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Delivery_com</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Customer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\CustomerOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\LocationCustomer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\LocationGeneric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\LocationMerchant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\MenuEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Merchant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\MerchantSchedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\Schedule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SearchSource.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+  </ItemGroup>
+</Project>
